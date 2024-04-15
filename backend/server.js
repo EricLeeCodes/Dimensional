@@ -48,45 +48,49 @@ const notesApiRoutes = require('./routes/notes-api');
 // Note: Endpoints that return data (eg. JSON) usually start with `/api`
 app.use('/api/users', usersApiRoutes);
 app.use('/api/notes', notesApiRoutes);
+
+app.use('/api/products', notesApiRoutes);
+app.use('/api/line_items', notesApiRoutes);
+app.use('/api/orders', notesApiRoutes);
 // Note: mount other resources here, using the same pattern above
 
 // Home page
 // Warning: avoid creating more routes in this file!
 // Separate them into separate routes files (see above).
-app.get('/', (req, res) => {
-  res.render('index');
-});
+// app.get('/', (req, res) => {
+//   res.render('index');
+// });
 
-app.get('/register', (req, res) => {
-  const { user_id } = req.session;
-  if (user_id) {
-    const templateVars = { message: 'User is already logged in' };
-    return res.status(401).render('error', templateVars);
-  }
+// app.get('/register', (req, res) => {
+//   const { user_id } = req.session;
+//   if (user_id) {
+//     const templateVars = { message: 'User is already logged in' };
+//     return res.status(401).render('error', templateVars);
+//   }
 
-  res.render('register');
-});
+//   res.render('register');
+// });
 
-app.get('/login', (req, res) => {
-  const { user_id } = req.session;
-  if (user_id) {
-    const templateVars = { message: 'User is already logged in' };
-    return res.status(401).render('error', templateVars);
-  }
+// app.get('/login', (req, res) => {
+//   const { user_id } = req.session;
+//   if (user_id) {
+//     const templateVars = { message: 'User is already logged in' };
+//     return res.status(401).render('error', templateVars);
+//   }
 
-  res.render('login');
-});
+//   res.render('login');
+// });
 
-app.get('/notes', (req, res) => {
-  const { user_id } = req.session;
-  if (!user_id) {
-    const templateVars = { message: 'User is not logged in' };
-    return res.status(401).render('error', templateVars);
-  }
+// app.get('/notes', (req, res) => {
+//   const { user_id } = req.session;
+//   if (!user_id) {
+//     const templateVars = { message: 'User is not logged in' };
+//     return res.status(401).render('error', templateVars);
+//   }
 
-  const templateVars = { user_id };
-  res.render('notes', templateVars);
-});
+//   const templateVars = { user_id };
+//   res.render('notes', templateVars);
+// });
 
 // Catch all route
 app.use((req, res) => {
