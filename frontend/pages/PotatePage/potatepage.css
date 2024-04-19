@@ -23,24 +23,7 @@ body {
 
 }
 
-.nav-bar {
-  display: flex;
-  align-content: space-between;
-  width: 100%;
-  justify-content: space-between;
-  margin-top: 30px;
-  margin-left: 110px;
-}
 
-.button-navbar {
-  font-family: 'Quicksand', sans-serif;
-  background: #5B8D80;
-  color:white;
-  border: none;
-  border-radius: 50px;
-  padding: 10px 30px;
-  margin-right: 130px;
-}
 .button-navbar:hover{
   background: #34524a;
   cursor:crosshair;

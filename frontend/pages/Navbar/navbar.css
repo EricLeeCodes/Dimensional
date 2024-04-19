@@ -1,0 +1,40 @@
+.navbar {
+  top: 0;
+  background-color: #cbdbec;
+  width: 95%;
+  height: 70px;
+  position: absolute;
+  display: flex;
+  align-content: space-between;
+  justify-content: space-between;
+  margin-left: 40px;
+  border-radius: 30px;
+  margin-top: 40px;
+}
+
+.navbar-item {
+  display: flex;
+  padding-left: 100px;
+  padding-right: 100px;
+
+  justify-content: space-between;
+  align-items: center;
+  width: 540px;
+}
+
+.item {
+  justify-content: space-between;
+}
+.navbar-cart {
+display: flex;
+align-items: center;
+
+padding-right: 100px;
+}
+
+.navbar-home {
+  display: flex;
+  align-items: center;
+  
+  padding-left: 80px;
+}
