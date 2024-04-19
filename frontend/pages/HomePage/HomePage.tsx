@@ -16,6 +16,9 @@ function HomePage() {
         <li>
           <Link to="/headphones">Headphones</Link>
         </li>
+        <li>
+          <Link to="/potate">The Potato</Link>
+        </li>
       </ul>
     </>
   );
