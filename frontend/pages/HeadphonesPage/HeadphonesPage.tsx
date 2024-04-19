@@ -15,8 +15,9 @@ function HeadphonesPage() {
   const objectRef = useRef(null);
 
   useEffect(() => {
+    let viewer;
     const setupViewer = async () => {
-      const viewer = new ViewerApp({
+       viewer = new ViewerApp({
         canvas: canvasRef.current,
       });
 
@@ -40,15 +41,21 @@ function HeadphonesPage() {
         objectRef.current = object;
 
         // Start animations
-        animateObject();
+        
       } catch (error) {
         console.error("Error setting up viewer:", error);
         // Handle error (e.g., show error message to user)
       }
     };
 
-    setupViewer();
-  }, []);
+    setupViewer();  
+    return () => {
+      // Dispose of the viewer
+      if (viewer) {
+          viewer.dispose();
+      }
+  };
+}, []);
 
   return (
     <>
