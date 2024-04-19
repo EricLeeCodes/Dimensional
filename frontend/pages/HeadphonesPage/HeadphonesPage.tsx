@@ -25,8 +25,9 @@ function HeadphonesPage() {
   console.log("CONTEXT VALUE!!!!!!", contextValue);
 
   useEffect(() => {
+    let viewer;
     const setupViewer = async () => {
-      const viewer = new ViewerApp({
+      viewer = new ViewerApp({
         canvas: canvasRef.current,
       });
 
@@ -57,6 +58,12 @@ function HeadphonesPage() {
     };
 
     setupViewer();
+    return () => {
+      // Dispose of the viewer
+      if (viewer) {
+        viewer.dispose();
+      }
+    };
   }, []);
 
   return (
