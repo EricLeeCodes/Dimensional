@@ -1,4 +1,6 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useContext } from "react";
+import Navbar from "../../src/components/navbar";
+import { ShopContext } from "../../src/context/shop-context.tsx";
 import {
   ViewerApp,
   addBasePlugins,
@@ -13,6 +15,14 @@ import "./headphonespage.css";
 function HeadphonesPage() {
   const canvasRef = useRef(null);
   const objectRef = useRef(null);
+
+  //Context
+  const contextValue = useContext(ShopContext);
+  // const id = props.data;
+  // const id = contextValue?.cartItems[0];
+
+  // console.log(contextValue?.cartItems);
+  console.log("CONTEXT VALUE!!!!!!", contextValue);
 
   useEffect(() => {
     const setupViewer = async () => {
@@ -40,7 +50,6 @@ function HeadphonesPage() {
         objectRef.current = object;
 
         // Start animations
-        animateObject();
       } catch (error) {
         console.error("Error setting up viewer:", error);
         // Handle error (e.g., show error message to user)
@@ -52,6 +61,7 @@ function HeadphonesPage() {
 
   return (
     <>
+      <Navbar />
       <div id="content">
         <section className="section">
           <h1>Sony WH-1000XM3</h1>
@@ -91,11 +101,17 @@ function HeadphonesPage() {
         <section className="section sixth">
           <div className="section-two">
             <h2>Close The World Around You</h2>
-            <p>Buy now</p>
+            <button
+              className="addToCartButton"
+              onClick={() => contextValue && contextValue!.addToCart(1)}
+            >
+              Add To Cart
+            </button>
           </div>
           <div></div>
         </section>
       </div>
+
       <div id="webgi-canvas-container">
         <canvas id="webgi-canvas" ref={canvasRef}></canvas>
       </div>
