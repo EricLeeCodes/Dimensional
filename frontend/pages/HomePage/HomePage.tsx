@@ -1,27 +1,57 @@
-import { Link } from "react-router-dom";
+
 import "./homepage.css";
+import Navbar from "../Navbar/Navbar"
+import gsap from "gsap";
+import { useEffect } from "react";
 
-function HomePage() {
+
+
+
+ function HomePage() {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js';
+    script.async = true;
+
+    // Append the script to the document body
+    document.body.appendChild(script);
+
+    // When the script is loaded, initialize GSAP and use TextPlugin
+    script.onload = () => {
+      // Initialize GSAP with plugins
+      gsap.registerPlugin(window.TextPlugin); // Ensure that 'window.TextPlugin' is available after the script is loaded
+
+      // Now you can use TextPlugin for text animations
+      gsap.to(".title", {
+        duration: 1,
+        text:{
+          value: "Dimensional",
+        },
+        delay: 3
+      });
+
+      gsap.to(".smalltitle", {
+        duration: 0.5,
+        yPercent: '-200',
+        opacity: 0,
+        ease: "power1.in",
+        delay: 3
+      })
+    };
+
+    // Cleanup: Remove the script from the document body when the component unmounts
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+  
   return (
-    <>
-      <h1>Home Page!</h1>
-
-      {/* TEMPORARY NAV BUTTONS! DELETE BEFORE PRODUCTION!!!*/}
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/phone">Phone</Link>
-        </li>
-        <li>
-          <Link to="/headphones">Headphones</Link>
-        </li>
-        <li>
-          <Link to="/potate">The Potato</Link>
-        </li>
-      </ul>
-    </>
+    <div>
+      <Navbar />
+      <h2 className="smalltitle">Welcome to</h2>
+      <h1 className="title">Our Website</h1> 
+  </div>
+      
   );
 }
 
