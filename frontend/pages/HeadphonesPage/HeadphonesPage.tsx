@@ -10,7 +10,7 @@ import { ScrollTrigger } from "gsap/all";
 
 import "./headphonespage.css";
 
-function PhonePage() {
+function HeadphonesPage() {
   const canvasRef = useRef(null);
   const objectRef = useRef(null);
 
@@ -103,4 +103,4 @@ function PhonePage() {
   );
 }
 
-export default PhonePage;
+export default HeadphonesPage;
