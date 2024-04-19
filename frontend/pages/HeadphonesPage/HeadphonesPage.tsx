@@ -1,5 +1,4 @@
 import { useRef, useEffect, useContext } from "react";
-import Navbar from "../../src/components/navbar";
 import { ShopContext } from "../../src/context/shop-context.tsx";
 import {
   ViewerApp,
@@ -18,11 +17,6 @@ function HeadphonesPage() {
 
   //Context
   const contextValue = useContext(ShopContext);
-  // const id = props.data;
-  // const id = contextValue?.cartItems[0];
-
-  // console.log(contextValue?.cartItems);
-  console.log("CONTEXT VALUE!!!!!!", contextValue);
 
   useEffect(() => {
     let viewer;
@@ -68,7 +62,6 @@ function HeadphonesPage() {
 
   return (
     <>
-      <Navbar />
       <div id="content">
         <section className="section">
           <h1>Sony WH-1000XM3</h1>

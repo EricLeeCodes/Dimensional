@@ -1,4 +1,4 @@
-import headphonesPic from "./assets/headphones.jpg";
+import headphonesPic from "./assets/headphones.png";
 import phonePic from "./assets/iphone.png";
 import potatoPic from "./assets/potato.png";
 
