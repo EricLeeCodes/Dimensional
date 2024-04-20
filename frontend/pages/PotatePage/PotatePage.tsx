@@ -1,4 +1,5 @@
 import { useRef, useEffect } from "react";
+import { ShopContext } from "../../src/context/shop-context.tsx";
 import {
   ViewerApp,
   addBasePlugins,
@@ -8,15 +9,19 @@ import {
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useGSAP } from "@gsap/react";
-
+import { useContext } from "react";
 import "./potatepage.css";
 
+
+
 gsap.registerPlugin(ScrollTrigger)
+
+
 
 function PotatePage() {
   const canvasRef = useRef(null);
   const objectRef = useRef(null);
-
+const contextValue = useContext(ShopContext);
   useGSAP(() => {
     const tl = gsap.timeline()
 
@@ -51,10 +56,6 @@ function PotatePage() {
   
   useEffect(() => {
     let viewer;
-    // const script = document.createElement('script')
-    // script.src = "frontend/pages/PotatePage/potate.ts"
-    // script.async =true;
-    // document.body.appendChild(script)
     const setupViewer = async () => {
        viewer = new ViewerApp({
         canvas: canvasRef.current,
@@ -136,7 +137,12 @@ function PotatePage() {
         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
         pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
         laborum."</p>
-        <button className="button-cart"> Add to cart <ion-icon name="basket-outline"></ion-icon></button>
+        <button
+              className="addToCartButton"
+              onClick={() => contextValue && contextValue!.addToCart(3)}
+            >
+              Add To Cart
+            </button>
     </div>
   </section>
   <button className="back">Back to top</button>
