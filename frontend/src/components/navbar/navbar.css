@@ -1,18 +1,23 @@
-.navbar {
+/* .navbar {
   position: fixed;
   top: 0;
-  width: 100%;
-  height: 80px;
-  background-color: rgb(19, 19, 19);
+  width: 95%;
+  height: 70px;
+  background-color: #cbdbec;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
+  align-content: space-between;
+  justify-content: space-between;
+  margin-left: 40px;
+  border-radius: 30px;
+  margin-top: 40px;
 }
 
 .links {
   margin-right: 50px;
   display: flex;
   align-items: center;
+  
 }
 
 .links a {
@@ -20,4 +25,9 @@
   color: white;
   margin-left: 20px;
   font-size: 25px;
+  
 }
+
+.links:hover {
+  background: black;
+} */

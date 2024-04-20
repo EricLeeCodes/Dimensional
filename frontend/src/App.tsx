@@ -3,10 +3,10 @@ import HomePage from "../pages/HomePage/HomePage.tsx";
 import PotatePage from "../pages/PotatePage/PotatePage.tsx";
 import HeadphonesPage from "../pages/HeadphonesPage/HeadphonesPage.tsx";
 import PhonePage from "../pages/PhonePage/PhonePage.tsx";
-import Navbar from "./components/navbar/navbar.tsx";
 import { ShopContextProvider } from "./context/shop-context.tsx";
 import Cart from "../pages/cart/cart.tsx";
 import ThankYou from "../pages/cart/thank-you.tsx";
+import Navbar from "../pages/Navbar/Navbar.tsx";
 
 function App() {
   return (
