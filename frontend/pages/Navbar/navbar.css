@@ -1,6 +1,6 @@
 .navbar {
   top: 0;
-  background-color: #cbdbec;
+  background-color: #005C64;
   width: 95%;
   height: 70px;
   position: absolute;
@@ -16,7 +16,7 @@
   display: flex;
   padding-left: 100px;
   padding-right: 100px;
-
+  
   justify-content: space-between;
   align-items: center;
   width: 540px;
@@ -37,4 +37,8 @@ padding-right: 100px;
   align-items: center;
   
   padding-left: 80px;
+}
+
+a {
+  color: aliceblue;
 }
