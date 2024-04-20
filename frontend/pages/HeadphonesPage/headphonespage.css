@@ -1,11 +1,9 @@
 body {
-  font-family: sans-serif;
+  font-family: "Quicksand", sans-serif;
   overflow-x: hidden;
-  margin: 0;
+  margin: 0%;
   padding: 0;
 }
-
-
 
 .navbar-button {
   background: black;
@@ -14,6 +12,11 @@ body {
   border-radius: 50px;
   padding: 10px 30px;
   margin-right: 40px;
+}
+
+.button-navbar:hover {
+  background: #34524a;
+  cursor: crosshair;
 }
 
 .logo {
@@ -28,8 +31,12 @@ body {
   z-index: -1;
 }
 
+section:nth-of-type(odd) {
+  /* Apply your styles */
+  background-color: #000; /* Example color */
+}
+
 h1 {
-  margin-left: 15%;
   font-size: 10rem;
   line-height: 8rem;
 }
@@ -40,7 +47,40 @@ h1 {
 }
 
 .section-two {
+  font-family: "Quicksand", sans-serif;
+  width: 600px;
+}
+
+.section-three {
+  font-family: "Quicksand", sans-serif;
+  width: 600px;
+  /* margin-top: 300px; */
+  /* margin-right: -600px; */
+  text-align: center;
+  /* opacity: 0; */
+}
+
+.section-four {
+  font-family: "Quicksand", sans-serif;
   width: 360px;
+  margin-right: -200px;
+  /* opacity: 0; */
+}
+
+.section-five {
+  font-family: "Quicksand", sans-serif;
+  width: 360px;
+  margin-right: -200px;
+}
+
+.section-six {
+  font-family: "Quicksand", sans-serif;
+  width: 360px;
+  margin-right: -200px;
+}
+
+.title {
+  text-align: center;
 }
 
 #webgi-canvas {

@@ -8,12 +8,50 @@ import {
 } from "webgi";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import { useGSAP } from "@gsap/react";
 
 import "./headphonespage.css";
 
 function HeadphonesPage() {
   const canvasRef = useRef(null);
   const objectRef = useRef(null);
+
+  useGSAP(() => {
+    const tl = gsap.timeline();
+
+    tl.to(".section-two", {
+      xPercent: "10",
+      opacity: 1,
+      scrollTrigger: {
+        trigger: ".second",
+        start: "top center",
+        end: "bottom 99%",
+        scrub: true,
+      },
+    });
+    // second section
+    tl.to(".section-three", {
+      xPercent: "-110",
+      opacity: 1,
+      scrollTrigger: {
+        trigger: ".third",
+        start: "top center",
+        end: "bottom 99%",
+        scrub: true,
+      },
+    });
+    //third section
+    tl.to(".section-four", {
+      xPercent: "-10",
+      opacity: 1,
+      scrollTrigger: {
+        trigger: ".fourth",
+        start: "top center",
+        end: "bottom 99%",
+        scrub: true,
+      },
+    });
+  });
 
   //Context
   const contextValue = useContext(ShopContext);
@@ -75,7 +113,7 @@ function HeadphonesPage() {
         </section>
 
         <section className="section third">
-          <div className="section-two">
+          <div className="section-three">
             <h2>Soft Padding</h2>
             <p>LALALALALALALAL</p>
           </div>
@@ -83,7 +121,7 @@ function HeadphonesPage() {
         </section>
 
         <section className="section fourth">
-          <div className="section-two">
+          <div className="section-four">
             <h2>Versatile Padding</h2>
             <p>LALALALALALALAL</p>
           </div>
@@ -91,7 +129,7 @@ function HeadphonesPage() {
         </section>
 
         <section className="section fifth">
-          <div className="section-two">
+          <div className="section-five">
             <h2>Assistance On Demand</h2>
             <p>LALALALALALALAL</p>
           </div>
@@ -99,7 +137,7 @@ function HeadphonesPage() {
         </section>
 
         <section className="section sixth">
-          <div className="section-two">
+          <div className="section-six">
             <h2>Close The World Around You</h2>
             <button
               className="addToCartButton"
