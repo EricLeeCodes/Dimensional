@@ -58,7 +58,7 @@ body {
 
 .second {
     position: relative;
-    margin-left: 140%;
+    margin-left: 150%;
     margin-top: -200px;
     max-width: 70%;
     /* transition: margin-left 1.5s ease; */
@@ -74,7 +74,7 @@ body {
 
 .fourth {
     position: relative;
-    margin-left: 170%;
+    margin-left: 200%;
     width: 20%;
     
 }
@@ -120,7 +120,9 @@ p {
 .section-two-container{
     font-family: 'Quicksand', sans-serif;
     width: 460px;
-    /* opacity: 0;
+    
+        transform: translateX(-480%);
+    z-index: 1000;
   }
 
 
