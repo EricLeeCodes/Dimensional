@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Quicksand", sans-serif;
   overflow-x: hidden;
@@ -29,11 +32,11 @@ body {
   height: 100vh;
   align-items: center;
   z-index: -1;
+  scroll-snap-align: start;
 }
 
-section:nth-of-type(odd) {
-  /* Apply your styles */
-  background-color: #000; /* Example color */
+.grey {
+  background-color: #f4b942;
 }
 
 h1 {
@@ -45,42 +48,110 @@ h1 {
   justify-content: flex-end;
   position: relative;
 }
-
-.section-two {
+.section-one {
   font-family: "Quicksand", sans-serif;
   width: 600px;
+  color: EFF2F1;
+  margin-left: 10%;
 }
 
-.section-three {
+.text-border {
+  color: black;
+  text-shadow: -2px -2px 0 #eee, 2px -2px 0 #eee, -2px 2px 0 #eee,
+    2px 2px 0 #eee;
+}
+
+.section-two-left {
   font-family: "Quicksand", sans-serif;
   width: 600px;
-  /* margin-top: 300px; */
-  /* margin-right: -600px; */
+  color: black;
+  width: 300px;
+}
+
+.section-two-left h4 {
+  padding: 0;
+  margin: 0;
+}
+
+.section-two-right {
+  font-family: "Quicksand", sans-serif;
+  width: 600px;
+  color: black;
+  margin-right: 15%;
+  width: 300px;
+}
+
+.section-three-top {
+  font-family: "Quicksand", sans-serif;
+  width: 600px;
   text-align: center;
-  /* opacity: 0; */
 }
 
-.section-four {
+.section-three-bottom {
+  font-family: "Quicksand", sans-serif;
+  width: 600px;
+  text-align: center;
+}
+
+.third h2 {
+  font-size: 4rem;
+  width: 100vw;
+}
+
+.section-four-top {
   font-family: "Quicksand", sans-serif;
   width: 360px;
   margin-right: -200px;
-  /* opacity: 0; */
+  color: black;
 }
 
-.section-five {
+.section-four-bottom {
   font-family: "Quicksand", sans-serif;
   width: 360px;
   margin-right: -200px;
+  color: black;
+}
+
+.section-five-left {
+  font-family: "Quicksand", sans-serif;
+  width: 360px;
+  margin-left: 7%;
+  margin-bottom: 500px;
+}
+
+.section-five-right {
+  font-family: "Quicksand", sans-serif;
+  width: 360px;
+  margin-left: 30%;
+  margin-bottom: 5%;
 }
 
 .section-six {
   font-family: "Quicksand", sans-serif;
   width: 360px;
   margin-right: -200px;
+  color: black;
 }
 
 .title {
   text-align: center;
+}
+
+.title-color-black {
+  color: black;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.black-text {
+  color: #304962;
+  font-weight: bold;
+}
+
+.add-to-cart {
+  padding-top: 15%;
 }
 
 #webgi-canvas {
