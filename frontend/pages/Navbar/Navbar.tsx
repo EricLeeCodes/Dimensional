@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./navbar.css";
-
+import { ShoppingCartSimple } from "phosphor-react";
 import { useGSAP } from '@gsap/react'
 import gsap from "gsap";
 
@@ -17,7 +17,11 @@ function Navbar() {
     <Link to="/headphones" className="item">Headphones</Link>
     <Link to="/potate" className="item">The Potato</Link>
     </span>
-    <span className="navbar-cart">Cart</span>
+    <span className="navbar-cart">
+    <Link to="/cart">
+          <ShoppingCartSimple size={32} />
+        </Link>
+    </span>
   </div>
   
   </div>
