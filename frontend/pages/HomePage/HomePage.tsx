@@ -37,13 +37,20 @@ import BIRDS from 'vanta/src/vanta.birds'
         ease: "power1.in",
         delay: 3
       })
+
+      gsap.to(".backing", {
+        duration: 1,
+        x: "150",
+        opacity: 0.8,
+        delay: 3.5
+      })
     };
     
     BIRDS({
       el: '#vanta',
       backgroundColor: "#e6f4f1",
-      color1: "#FFEC00",
-      color2: "#F9F9F9",
+      color1: "#F4B942",
+      color2: "#FFC144",
       colorMode: "lerpGradient",
     })
     // Cleanup: Remove the script from the document body when the component unmounts
@@ -57,6 +64,7 @@ import BIRDS from 'vanta/src/vanta.birds'
     <div>
       <Navbar />
       <div className="bg" id="vanta"></div>
+      <div className="backing"></div>
       <h2 className="smalltitle">Where the horizon</h2>
       <h1 className="title">is just the beginning</h1> 
       

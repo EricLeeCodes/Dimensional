@@ -3,13 +3,21 @@
   font-size: 84px;
   margin-left: 40px;
   height: 20px;
-  margin-top: -20px;
+  margin-top: -40px;
   margin-bottom: 20px;
+  font-family: Quicksand;
+  font-weight:300 ;
+  z-index: 10;
+  transform: translate(0px, -150px)
 }
 
 .title {
   color: #00ADAD;
   width: 100%;
+  font-family: Quicksand;
+  font-weight:300 ;
+  z-index: 10;
+  transform: translate(0px, -150px)
 }
 
 .vanta-container {
@@ -18,6 +26,17 @@
 }
 
 .newtitle {
-  color: #95B1B0 ;
+  color: #304962 ;
+  z-index: 1;
+  position: relative;
 }
 
+.backing {
+  width: 60rem;
+  height: 15rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5rem;
+  z-index: -1;
+  opacity: 0;
+  transform: translate(80px, 130px)
+}
