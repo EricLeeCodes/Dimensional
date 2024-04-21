@@ -10,7 +10,7 @@ function Navbar() {
     <div>
   <div className="navbar">
     <span className="navbar-home">
-    <Link to="/" >Home</Link>
+    <Link to="/" className="item2">Home</Link>
     </span>
     <span className="navbar-item">
     <Link to="/phone" className="item">Phone</Link>

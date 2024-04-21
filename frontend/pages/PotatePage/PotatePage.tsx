@@ -11,8 +11,8 @@ import { ScrollTrigger } from "gsap/all";
 import { useGSAP } from "@gsap/react";
 import { useContext } from "react";
 import "./potatepage.css";
-
-
+import plate from '/potatopagepics/plate.png'
+import medal from '/potatopagepics/istockphoto-1391778705-612x612.png'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -24,8 +24,8 @@ function PotatePage() {
 const contextValue = useContext(ShopContext);
   useGSAP(() => {
     const tl = gsap.timeline()
-
-    tl.to(".section-two-container", {xPercent: '10', opacity: 1,
+    
+    tl.to(".section-two-container", {xPercent: '-200', opacity: 1,
       scrollTrigger: {
         trigger: ".second",
         start: "top center",
@@ -51,6 +51,27 @@ const contextValue = useContext(ShopContext);
        
         scrub: true,
       }})
+
+      tl.to(".plate", {xPercent: "-100", opacity: 0,
+        scrollTrigger: {
+          trigger:".section",
+          start: "10% top",
+          end: "center ",
+          // markers: true,
+          scrub: true
+        }
+      })
+
+      
+      tl.to(".medal", {
+        xPercent: "30",
+        yPercent: "30",
+        height: "600px",
+        duration: 0.2,
+        opacity: 1,
+        delay: 2,
+      })
+     
   })
  
   
@@ -100,20 +121,18 @@ const contextValue = useContext(ShopContext);
   return (
     <>
     <div>
-      <section className="section">
+      <section className="section first">
     <div className="section-one-container">
       <h1>The Epicurean's Choice</h1>
-
+      <img src={plate} alt="Plate" className="plate"/>
+      <img src={medal} alt="Medal" className="medal"/>
     </div>
   </section>
 
   <section className="section second">
     <div className="section-two-container">
       <h2 className="title">The Epicurean's Choice</h2>
-      <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+      <p>"m id est
         laborum."</p>
     </div>
   </section>
@@ -137,15 +156,13 @@ const contextValue = useContext(ShopContext);
         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
         pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
         laborum."</p>
-        <button
-              className="addToCartButton"
-              onClick={() => contextValue && contextValue!.addToCart(3)}
-            >
-              Add To Cart
-            </button>
-    </div>
+        </div>
+       
   </section>
   <button className="back">Back to top</button>
+  <button className="addToCartButton" onClick={() => contextValue && contextValue!.addToCart(3)}>
+        Add To Cart
+        </button>
   <div id="webgi-canvas-container">
     <canvas id="webgi-canvas" ref={canvasRef}></canvas>
   </div>
