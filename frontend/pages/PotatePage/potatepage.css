@@ -3,12 +3,14 @@ body {
   overflow-x: hidden;
   margin: 0%;
   padding: 0;
+  color: #304962;
+  
   
 }
 #webgi-canvas {
   width: 100%;
   height: 100%;
-  position: fixed;
+  
   top: 0;
   z-index: -100;
 }
@@ -16,12 +18,12 @@ body {
   width: 100vw;
   height: 100vh;
   pointer-events: none;
-  position: fixed;
+  
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
   align-items: center;
-  z-index: -1;
+  
 }
 
 
@@ -38,15 +40,19 @@ body {
 }
 
 h1 {
-
+  font-weight: 300;
  font-size: 8rem;
  line-height: 8rem;
+}
+
+.first {
+
 }
 
 .second {
   font-size: 20px;
   margin-left: 3%;
-  position: relative;
+ 
   
 }
 
@@ -64,21 +70,25 @@ h1 {
 }
 
 .section-one-container {
+  margin-top: 10rem;
   font-family: 'Quicksand', sans-serif;
   margin-bottom: 300px;
   text-align: center;
   margin-left:110px;
+  position: relative;
 }
 
 .section-two-container {
   font-family: 'Quicksand', sans-serif;
   width: 600px;
+  height: 200px;
   /* opacity: 0; */
 }
 
 .section-three-container {
   font-family: 'Quicksand', sans-serif;
   width: 600px;
+  
   /* margin-top: 300px; */
   /* margin-right: -600px; */
   text-align: center;
@@ -106,5 +116,19 @@ h1 {
 }
 
 .addToCartButton{
-  z-index: 100000000000000000000000000;
+  z-index: 100;
+}
+
+.plate {
+  position: absolute;
+  z-index: -1000;
+  transform: translate(-700px, -100px) scale(2, 2);
+  
+}
+
+.medal {
+  height: 800px;
+  position: absolute;
+  transform: translate(100px, -500px) rotate(20deg);
+  opacity: 0;
 }
