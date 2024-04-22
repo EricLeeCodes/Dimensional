@@ -522,7 +522,6 @@ function HeadphonesPage() {
         </section>
       </div>
       <ToastContainer />
-
       <div id="webgi-canvas-container">
         <canvas id="webgi-canvas" ref={canvasRef}></canvas>
       </div>
