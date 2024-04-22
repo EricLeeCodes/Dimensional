@@ -1,4 +1,7 @@
 import { useRef, useEffect, useContext } from "react";
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { Link } from "react-router-dom";
 import { ShopContext } from "../../src/context/shop-context.tsx";
 import {
@@ -20,6 +23,12 @@ function HeadphonesPage() {
   const canvasRef = useRef(null);
   const objectRef = useRef(null);
 
+  const addSuccess = () =>
+    toast.success("Successfully added to cart!", {
+      position: "top-right",
+      theme: "dark",
+    });
+
   //GSAP Animation transitions
   useGSAP(() => {
     const tl = gsap.timeline();
@@ -39,7 +48,6 @@ function HeadphonesPage() {
           start: "top center",
           end: "bottom 100%",
           scrub: true,
-          markers: true,
           snap: 1,
         },
       }
@@ -77,7 +85,6 @@ function HeadphonesPage() {
             start: "top center",
             end: "bottom 100%",
             scrub: true,
-            markers: true,
             snap: 1,
           },
         }
@@ -282,7 +289,6 @@ function HeadphonesPage() {
           start: "top center",
           end: "bottom 100%",
           scrub: true,
-          markers: true,
           snap: 1,
         },
       }
@@ -315,7 +321,6 @@ function HeadphonesPage() {
             start: "top center",
             end: "bottom 100%",
             scrub: true,
-            markers: true,
             snap: 1,
           },
         }
@@ -352,7 +357,6 @@ function HeadphonesPage() {
           start: "top center",
           end: "bottom 100%",
           scrub: true,
-          markers: true,
           snap: 1,
         },
       }
@@ -405,7 +409,7 @@ function HeadphonesPage() {
         viewer.dispose();
       }
     };
-  });
+  }, []);
 
   return (
     <>
@@ -499,10 +503,16 @@ function HeadphonesPage() {
 
             <div className="buttons">
               <button
-                onClick={() => contextValue && contextValue!.addToCart(1)}
+                onClick={() => {
+                  if (contextValue) {
+                    contextValue.addToCart(1); // Add to cart
+                    addSuccess();
+                  }
+                }}
               >
                 Add To Cart
               </button>
+
               <Link to="/">
                 <button>Back to Home</button>
               </Link>
@@ -511,7 +521,7 @@ function HeadphonesPage() {
           <div></div>
         </section>
       </div>
-
+      <ToastContainer />
       <div id="webgi-canvas-container">
         <canvas id="webgi-canvas" ref={canvasRef}></canvas>
       </div>
