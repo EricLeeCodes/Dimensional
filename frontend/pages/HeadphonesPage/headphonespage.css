@@ -103,18 +103,28 @@ h1 {
   position: relative;
   font-size: 24px;
 }
-.section-four-top {
+.section-four-right {
   font-family: "Quicksand", sans-serif;
   width: 360px;
   margin-right: -200px;
   color: black;
 }
 
-.section-four-bottom {
+.battery-img {
+  margin-top: 50%;
+}
+
+.section-four-left {
   font-family: "Quicksand", sans-serif;
   width: 360px;
   margin-right: -200px;
   color: black;
+}
+
+.ldac-img {
+  height: 300px;
+  width: 300px;
+  margin-bottom: 50%;
 }
 
 .section-five-left {
@@ -122,6 +132,11 @@ h1 {
   width: 360px;
   margin-left: 7%;
   margin-bottom: 500px;
+  margin-top: 400px;
+}
+
+.multi-dev-img {
+  margin-top: 50%;
 }
 
 .section-five-right {
