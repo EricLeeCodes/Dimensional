@@ -37,7 +37,6 @@ body {
   height: 100vh;
   align-items: center;
   z-index: -1;
-  position: relative;
 }
 
 .potatotitle {
@@ -45,15 +44,16 @@ body {
  font-size: 8rem;
  line-height: 8rem;
  width: 100rem;
+ 
 
 }
+
 .potatosubtitle {
-  font-weight: 300;
-  font-size: 4rem;
-  position: absolute;
-  transform: translate(30rem, -10rem);
+font-size: 5rem;
+font-weight: 300;
+transform: translate(20rem, -12rem);
+position: absolute;
 }
-
 
 .secondpotato {
   font-size: 20px;
@@ -95,7 +95,6 @@ body {
   text-align: center;
   left: 3rem;
   position: relative;
-  transform: translate(0rem, -10rem);
 }
 
 .section-three-container {
@@ -127,7 +126,6 @@ body {
   transform: translate( 0rem, -10rem);
   /* margin-right: -200px; */
   /* opacity: 0; */
-  position: absolute;
 }
 
 .title {
@@ -143,9 +141,8 @@ body {
   margin-right: 130px;
 }
 
-.addToCartButtonpotato{
+.addToCartButton{
   z-index: 100;
-  position: absolute;
 }
 
 .plate {

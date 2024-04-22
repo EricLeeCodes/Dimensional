@@ -192,19 +192,22 @@ function PotatePage() {
           </div>
         </section>
 
-        <section className="section fourthpotato">
+        <div>
           <div className="section-four-container">
             <span>You hungry?</span>
-            <div><button
-          className="addToCartButtonpotato"
+            <div className="buttons">
+              <button
+          
           onClick={() => contextValue && contextValue!.addToCart(3)}
         >
           Add To Cart
         </button></div>
             
           </div>
+        </div>
           
-        </section>
+          
+       
         <button className="back">Back to top</button>
       
         <div id="webgi-canvas-container">
