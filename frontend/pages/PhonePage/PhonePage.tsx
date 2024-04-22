@@ -8,7 +8,7 @@ import {
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useGSAP } from "@gsap/react";
-
+//potate
 import "./phonepage.css";
 
 gsap.registerPlugin(ScrollTrigger)
