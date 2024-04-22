@@ -1,23 +1,25 @@
 .smalltitle {
-  color: #00ADAD;
+  color: #00adad;
   font-size: 84px;
   margin-left: 40px;
   height: 20px;
   margin-top: -40px;
   margin-bottom: 20px;
   font-family: Quicksand;
-  font-weight:300 ;
+  font-weight: 300;
   z-index: 10;
-  transform: translate(0px, -150px)
+  transform: translate(0px, -150px);
 }
 
 .title {
-  color: #00ADAD;
+  color: #00adad;
   width: 100%;
   font-family: Quicksand;
-  font-weight:300 ;
+  font-weight: 300;
   z-index: 10;
-  transform: translate(9rem, -150px)
+  transform: translate(9rem, -150px);
+  font-size: 10rem;
+  line-height: 8rem;
 }
 
 .vanta-container {
@@ -26,7 +28,7 @@
 }
 
 .newtitle {
-  color: #304962 ;
+  color: #304962;
   z-index: 1;
   position: relative;
 }
@@ -38,5 +40,5 @@
   border-radius: 5rem;
   z-index: -1;
   opacity: 0;
-  transform: translate(80px, 130px)
+  transform: translate(80px, 130px);
 }
