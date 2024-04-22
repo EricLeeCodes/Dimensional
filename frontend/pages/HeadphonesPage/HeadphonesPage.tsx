@@ -12,6 +12,9 @@ import {
 } from "webgi";
 
 import processor from "./images/processor.png";
+import battery from "./images/xm3battery.jpg";
+import multiDev from "./images/xm3multidevice.jpg";
+import Ldac from "./images/LDAC.png";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
@@ -196,14 +199,14 @@ function HeadphonesPage() {
 
     //fourth section
     tl.fromTo(
-      ".section-four-top",
+      ".section-four-right",
       {
         xPercent: "0",
         opacity: 0,
       },
       {
-        xPercent: "40",
-        yPercent: "-100",
+        xPercent: "-20",
+        yPercent: "0",
         opacity: 1,
         scrollTrigger: {
           trigger: ".fourth",
@@ -215,15 +218,15 @@ function HeadphonesPage() {
       }
     );
     tl.fromTo(
-      ".section-four-top",
+      ".section-four-right",
       {
-        xPercent: "40",
-        yPercent: "-100",
+        xPercent: "-20",
+        yPercent: "0",
         opacity: 1,
       },
       {
-        xPercent: "40",
-        yPercent: "-100",
+        xPercent: "-20",
+        yPercent: "0",
         opacity: 0,
         duration: 1,
         ease: "power1.inOut",
@@ -236,14 +239,14 @@ function HeadphonesPage() {
       }
     );
     tl.fromTo(
-      ".section-four-bottom",
+      ".section-four-left",
       {
         xPercent: "0",
         opacity: 0,
       },
       {
-        xPercent: "-380",
-        yPercent: "120",
+        xPercent: "-440",
+        yPercent: "0",
         opacity: 1,
         scrollTrigger: {
           trigger: ".fourth",
@@ -255,15 +258,15 @@ function HeadphonesPage() {
       }
     );
     tl.fromTo(
-      ".section-four-bottom",
+      ".section-four-left",
       {
-        xPercent: "-380",
-        yPercent: "120",
+        xPercent: "-440",
+        yPercent: "0",
         opacity: 1,
       },
       {
-        xPercent: "-380",
-        yPercent: "120",
+        xPercent: "-440",
+        yPercent: "0",
         opacity: 0,
         duration: 1,
         ease: "power1.inOut",
@@ -294,7 +297,7 @@ function HeadphonesPage() {
       }
     );
     tl.fromTo(
-      ".section-five-right",
+      ".section-five-left",
       {
         opacity: 1,
       },
@@ -341,6 +344,8 @@ function HeadphonesPage() {
           },
         }
       );
+
+    //Section Six
 
     tl.fromTo(
       ".section-six",
@@ -452,14 +457,20 @@ function HeadphonesPage() {
         </section>
 
         <section className="section fourth">
-          <div className="section-four-top">
-            <h2>USB C</h2>
+          <div className="section-four-right">
+            <h2>Lasting Battery</h2>
             <p>
               Versatile, lightning-fast, universally compatible, revolutionizing
               connectivity across devices, embracing the future of technology.
             </p>
+            <img
+              src={battery}
+              alt="Long lasting battery explanation"
+              className="battery-img"
+            />
           </div>
-          <div className="section-four-bottom">
+          <div className="section-four-left">
+            <img src={Ldac} alt="LDAC and Hi-Res audio" className="ldac-img" />
             <h2>Hi-Fi LDAC Codec</h2>
             <p>
               LDAC delivers high-res audio wirelessly with unparalleled fidelity
@@ -471,13 +482,18 @@ function HeadphonesPage() {
 
         <section className="section fifth grey">
           <div className="section-five-left">
-            <h2 className="title-color-black">Assistance On Demand</h2>
+            <h2 className="title-color-black">Multi-device Pairing</h2>
             <p className="black-text">
-              Experience the convenience of instant assistance at your
-              fingertips with the WH-1000XM3 headphones, which seamlessly
-              integrate a voice assistant feature for on-demand help whenever
-              you need it.
+              ony's WH-1000XM3 headphones provide convenient multi-device
+              pairing, enabling seamless switching between devices for
+              uninterrupted listening. With advanced Bluetooth technology, users
+              can enjoy hassle-free audio streaming across various devices.
             </p>
+            <img
+              src={multiDev}
+              alt="Compatibility with multiple devices"
+              className="multi-dev-img"
+            />
           </div>
           <div className="section-five-right">
             <h2 className="title-color-black">Versatile Touch Features</h2>
