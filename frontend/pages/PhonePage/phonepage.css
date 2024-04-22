@@ -3,6 +3,7 @@ body {
     overflow-x: hidden;
     margin: 0%;
     padding: 0%;
+    color: black
     
   }
   
@@ -42,7 +43,7 @@ body {
   .selfie-section {
     float: left; 
     width: 150%;
-    margin-left: -610%;
+    margin-left: -110%;
 }
 
 .brilliance {
@@ -81,7 +82,7 @@ body {
 
 .fifth {
     position: relative;
-    margin-left: 50%;
+    margin-left: 130%;
     width: 20%;
     
 }

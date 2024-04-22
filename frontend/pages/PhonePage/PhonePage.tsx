@@ -166,7 +166,7 @@ return (
             Unlock the potential of your selfies with the iPhone 15 Pro Max front
             camera. Featuring TrueDepth technology, it captures stunning portraits
             with remarkable detail and depth. With Night mode and Smart HDR 4,
-            every selfie shines, day or night, ensuring you always look your best.
+            every selfie shines, day or night, ensuring you always look your best
           </p>
         </div>
       </section>

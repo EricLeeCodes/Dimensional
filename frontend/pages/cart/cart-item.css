@@ -1,0 +1,46 @@
+
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .cart-item img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+  }
+  
+  .cart-item .description {
+    flex-grow: 1;
+  }
+  
+  .cart-item p {
+    margin: 0;
+  }
+  
+  .cart-item .countHandler {
+    display: flex;
+    align-items: center;
+  }
+  
+  .cart-item .countHandler button {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  .cart-item .countHandler input {
+    width: 40px;
+    text-align: center;
+  }
+  
