@@ -297,7 +297,7 @@ function HeadphonesPage() {
       }
     );
     tl.fromTo(
-      ".section-five-left",
+      ".section-five-right",
       {
         opacity: 1,
       },
@@ -345,7 +345,7 @@ function HeadphonesPage() {
         }
       );
 
-    //Section Six
+    //Section six
 
     tl.fromTo(
       ".section-six",
@@ -421,7 +421,7 @@ function HeadphonesPage() {
       <div id="content">
         <section className="section grey">
           <div className="section-one">
-            <h1 className="text-border">Sony WH-1000XM3</h1>
+            <h1 className="text-border h1-headphones">Sony WH-1000XM3</h1>
           </div>
         </section>
 
@@ -514,7 +514,7 @@ function HeadphonesPage() {
 
         <section className="section sixth">
           <div className="section-six">
-            <h1>Come Join Us</h1>
+            <h1 className="h1-headphones">Come Join Us</h1>
             <h2>Close The World Around You</h2>
 
             <div className="buttons">
