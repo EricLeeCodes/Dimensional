@@ -297,7 +297,7 @@ function HeadphonesPage() {
       }
     );
     tl.fromTo(
-      ".section-five-right",
+      ".section-five-left",
       {
         opacity: 1,
       },
@@ -344,6 +344,8 @@ function HeadphonesPage() {
           },
         }
       );
+
+    //Section Six
 
     tl.fromTo(
       ".section-six",
