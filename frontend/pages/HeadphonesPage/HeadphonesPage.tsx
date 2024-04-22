@@ -513,7 +513,6 @@ function HeadphonesPage() {
                 Add To Cart
               </button>
 
-              <ToastContainer />
               <Link to="/">
                 <button>Back to Home</button>
               </Link>
@@ -522,6 +521,7 @@ function HeadphonesPage() {
           <div></div>
         </section>
       </div>
+      <ToastContainer />
 
       <div id="webgi-canvas-container">
         <canvas id="webgi-canvas" ref={canvasRef}></canvas>
