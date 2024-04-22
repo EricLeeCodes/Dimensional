@@ -7,14 +7,14 @@ import {
   ScrollableCameraViewPlugin,
 } from "webgi";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
+import { ScrollTrigger, TextPlugin } from "gsap/all";
 import { useGSAP } from "@gsap/react";
 import { useContext } from "react";
 import "./potatepage.css";
 import plate from "/potatopagepics/plate.png";
-import medal from "/potatopagepics/istockphoto-1391778705-612x612.png";
 
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(TextPlugin)
 
 function PotatePage() {
   const canvasRef = useRef(null);
@@ -22,40 +22,48 @@ function PotatePage() {
   const contextValue = useContext(ShopContext);
   useGSAP(() => {
     const tl = gsap.timeline();
+    
 
+    //title animation
+    tl.to(".potatosubtitle", {
+      duration: 2,
+      text: "Seductive Secrets of the Potatoes Await",
+      ease: "none",
+      delay: 2
+    })
     //section two stuff
 
     tl.fromTo(
       ".section-two-container",
-      {xPercent: "-250",
+      {xPercent: "0",
         opacity: 0
       }, {
-        xPercent: "-200",
+        xPercent: "40",
         opacity: 1,
         scrollTrigger: {
-              trigger: ".second",
+              trigger: ".secondpotato",
               start: "top center",
               end: "50%% center",
               // markers: true,
-              scrub: 2,
+              scrub: 1,
             }
       }),
 
-      // tl.fromTo(
-      //   ".section-two-container",
-      //   {xPercent: "-200",
-      //     opacity: 1
-      //   }, {
-      //     xPercent: "-250",
-      //     opacity: 0,
-      //     scrollTrigger: {
-      //           trigger: ".second",
-      //           start: "80% center",
-      //           end: "bottom center",
-      //           // markers: true,
-      //           scrub: 2,
-      //         }
-      //   }),
+      tl.fromTo(
+        ".section-two-container",
+        {xPercent: "40",
+          opacity: 1
+        }, {
+          xPercent: "0",
+          opacity: 0,
+          scrollTrigger: {
+                trigger: ".secondpotato",
+                start: "80% center",
+                end: "bottom center",
+                // markers: true,
+                scrub: 1,
+              }
+        }),
   
    
     // section three stuff
@@ -146,7 +154,8 @@ function PotatePage() {
       <div>
         <section className="section first">
           <div className="section-one-container">
-            <h1 className="potatotitle">The Potato of Destiny</h1>
+            <h1 className="potatotitle">Unlock Your Destiny:</h1>
+            <h2 className="potatosubtitle"></h2>
             <img src={plate} alt="Plate" className="plate" />
            
           </div>
@@ -186,15 +195,18 @@ function PotatePage() {
         <section className="section fourthpotato">
           <div className="section-four-container">
             <span>You hungry?</span>
-          </div>
-        </section>
-        <button className="back">Back to top</button>
-        <button
-          className="addToCartButton"
+            <div><button
+          className="addToCartButtonpotato"
           onClick={() => contextValue && contextValue!.addToCart(3)}
         >
           Add To Cart
-        </button>
+        </button></div>
+            
+          </div>
+          
+        </section>
+        <button className="back">Back to top</button>
+      
         <div id="webgi-canvas-container">
           <canvas id="webgi-canvas" ref={canvasRef}></canvas>
         </div>
