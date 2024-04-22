@@ -98,6 +98,11 @@ h1 {
   width: 100vw;
 }
 
+.fourth {
+  justify-content: flex-end;
+  position: relative;
+  font-size: 24px;
+}
 .section-four-top {
   font-family: "Quicksand", sans-serif;
   width: 360px;
