@@ -57,7 +57,6 @@ position: absolute;
 
 .secondpotato {
   font-size: 20px;
- 
  background: #97D8C4;
   
 }
@@ -74,7 +73,7 @@ position: absolute;
   /* position: relative; */
   font-size: 24px;
   
-  background-color: #97D8C4;
+  background-color: #Eff2f1;
 }
 
 .section-one-container-potato {
@@ -94,12 +93,27 @@ position: absolute;
   text-align: center;
   left: 3rem;
   position: relative;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   line-height: 2.5;
   
 }
 
+.potatotextone {
+width: 30rem;
+transform: translate(-3rem, -7rem);
+}
+.potatotexttwo {
+  width: 30rem;
+  transform: translate(40rem,-25rem);
+}
 
+.potatotextthree {
+  width: 30rem;
+  transform: translate( 3rem, -26rem);
+}
+.title2 {
+  color: white;
+}
 .section-three-container-potato {
   border: #304962;
   border-style: solid;
@@ -116,20 +130,18 @@ position: absolute;
 }
 .sectionthreetitle {
  text-align: center;
- width: auto;
- font-size: 2rem;
-
- 
+ width: 100rem;
+ font-size: 7.1rem;
+ left: 0;
+ position: absolute;
+ transform: translate(12rem, -30rem);
 }
 
 .section-four-container-potato {
   font-family: 'Quicksand', sans-serif;
-  width: 50rem;
   text-align: center;
-  transform: translate( 0rem, -10rem);
-  /* margin-right: -200px; */
-  /* opacity: 0; */
- 
+  width: 100vw;
+  height: 100vh;
 }
 
 .titlepotato {
@@ -157,3 +169,83 @@ position: absolute;
   
 }
 
+.potato1 {
+  height: 29rem;
+  left: 0;
+  transform: translate(0rem, -33rem);
+  position: absolute;
+  opacity: 0;
+}
+
+.potato2 {
+  height: 29rem;
+  position: absolute;
+  left: 0;
+  transform: translate(25rem, -20rem);
+  opacity: 0;
+}
+
+.potato3 {
+  height: 40rem;
+  position: absolute;
+  left: 0;
+  transform: translate(0rem, -10rem);
+  opacity: 0;
+}
+
+.potato4 {
+  height: 29rem;
+  position: absolute;
+  right: 0;
+  transform: translate(-65rem, 4rem);
+  opacity: 0;
+}
+
+.potato5 {
+height: 29rem;
+position: absolute;
+right: 0;
+transform: translate(-25rem, 0rem);
+opacity: 0;
+}
+
+.potato6 {
+  height: 29rem;
+  position: absolute;
+  right: 0;
+  transform: translate(0rem, -10rem);
+  opacity: 0;
+}
+
+.potato7 {
+  height: 29rem;
+  position: absolute;
+  right: 0;
+  transform: translate(-14rem, -30rem);
+  opacity: 0;
+}
+
+.endingtitle {
+  font-size: 9rem;
+  font-weight: 300;
+  color: #6B9AC4;
+  transform: translate(15rem, 0rem);
+  /* opacity: 0; */
+}
+
+.endingsubtitle{
+  font-size: 8rem;
+  font-weight: 100;
+  color: #6B9AC4;
+  transform: translate(10rem,0rem);
+}
+.potatobutton {
+  color: white;
+}
+
+.button-potato-page {
+  width: 30rem;
+  transform: translate(60rem, 7rem);
+  display: flex;
+  justify-content: space-between;
+}
