@@ -1,0 +1,37 @@
+.aboutus {
+  width: 100vw;
+  height: 100vh;
+  /* position: relative; */
+  text-align: center;
+  color: black;
+}
+
+.aboutusintro {
+  font-size: 1.5rem;
+  transform: translate(0rem, 7rem);
+  text-align: left;
+  padding-left: 3rem;
+  width: 96%;
+  color: black;
+}
+
+.section-jake {
+transform: translate(0rem, 10rem);
+left: 3rem;
+position: absolute;
+font-size: 1.5rem;
+}
+
+.section-daniel {
+  transform: translate(60rem, 20rem);
+left: 3rem;
+position: absolute;
+font-size: 1.5rem;
+}
+
+.section-eric {
+  transform: translate(0rem, 30rem);
+  left: 3rem;
+  position: absolute;
+  font-size: 1.5rem;
+}

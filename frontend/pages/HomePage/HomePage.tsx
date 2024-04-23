@@ -4,6 +4,7 @@ import Navbar from "../Navbar/Navbar"
 import gsap from "gsap";
 import { useEffect } from "react";
 import BIRDS from 'vanta/src/vanta.birds'
+import { Link } from "react-router-dom";
 
  function HomePage() {
   
@@ -67,6 +68,7 @@ import BIRDS from 'vanta/src/vanta.birds'
       <div className="backing"></div>
       <h2 className="smalltitle">Where the horizon</h2>
       <h1 className="title">is just the beginning</h1> 
+      <Link to="/aboutus"><button className="aboutusbutton">About us</button></Link>
       
   </div>
       

@@ -7,6 +7,7 @@ import {
   ScrollableCameraViewPlugin,
 } from "webgi";
 import gsap from "gsap";
+import { Link } from "react-router-dom"
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"
 import { ScrollTrigger, TextPlugin } from "gsap/all";
@@ -45,7 +46,7 @@ function PotatePage() {
     //title animation
     tl.to(".potatosubtitle", {
       duration: 2.5,
-      text: "Seductive Secrets of the Potatoe Await",
+      text: "Seductive Secrets of the Potato Await",
       ease: "steps(33)",
       delay: 1,
     });
@@ -61,7 +62,7 @@ function PotatePage() {
           trigger: ".secondpotato",
           start: "top bottom",
           end: "bottom bottom",
-          markers: true,
+          // markers: true,
           scrub: 1,
         },
       }
@@ -264,7 +265,9 @@ function PotatePage() {
                 onClick={() => contextValue && contextValue!.addToCart(3)}
               >
                 Add To Cart
-              </button><button className="potatobutton">Back to top</button>
+              </button>
+              <Link to="/"><button className="potatobutton">Back to Home</button> </Link>
+              
             </div>
           </div><ToastContainer />
         </section>

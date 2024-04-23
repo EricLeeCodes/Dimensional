@@ -42,3 +42,14 @@
   opacity: 0;
   transform: translate(80px, 130px);
 }
+
+.aboutusbutton {
+  background-color: #00adad;
+  border-radius: 6rem;
+  height: 6.8rem;
+  position: absolute;
+  scale: 0.7;
+  right: 0;
+  transform: translateY(6rem);
+  opacity: 0.6;
+}
