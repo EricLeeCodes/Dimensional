@@ -35,7 +35,7 @@ body {
   scroll-snap-align: start;
 }
 
-.grey {
+.yellow-bg {
   background-color: #f4b942;
 }
 
@@ -133,6 +133,10 @@ body {
   margin-left: 7%;
   margin-bottom: 500px;
   margin-top: 400px;
+}
+
+.center-text {
+  text-align: center;
 }
 
 .multi-dev-img {

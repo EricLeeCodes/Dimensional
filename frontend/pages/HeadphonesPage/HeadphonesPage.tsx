@@ -49,8 +49,8 @@ function HeadphonesPage() {
         opacity: 1,
         scrollTrigger: {
           trigger: ".second",
-          start: "top center",
-          end: "bottom 100%",
+          start: "top bottom",
+          end: "bottom bottom",
           scrub: true,
           snap: 1,
         },
@@ -86,8 +86,8 @@ function HeadphonesPage() {
           opacity: 1,
           scrollTrigger: {
             trigger: ".second",
-            start: "top center",
-            end: "bottom 100%",
+            start: "top bottom",
+            end: "bottom bottom",
             scrub: true,
             snap: 1,
           },
@@ -124,12 +124,12 @@ function HeadphonesPage() {
       },
       {
         yPercent: "-150",
-        xPercent: "-200",
+        xPercent: "-80",
         opacity: 1,
         scrollTrigger: {
           trigger: ".third",
-          start: "top center",
-          end: "bottom 100%",
+          start: "top bottom",
+          end: "bottom bottom",
           scrub: true,
           snap: 1,
         },
@@ -139,12 +139,12 @@ function HeadphonesPage() {
       ".section-three-top",
       {
         yPercent: "-150",
-        xPercent: "-200",
+        xPercent: "-80",
         opacity: 1,
       },
       {
         yPercent: "-150",
-        xPercent: "-200",
+        xPercent: "-80",
         opacity: 0,
         duration: 1,
         ease: "power1.inOut",
@@ -164,13 +164,13 @@ function HeadphonesPage() {
         opacity: 0,
       },
       {
-        xPercent: "-150",
+        xPercent: "-30",
         yPercent: "150",
         opacity: 1,
         scrollTrigger: {
           trigger: ".third",
-          start: "top center",
-          end: "bottom 100%",
+          start: "top bottom",
+          end: "bottom bottom",
           scrub: true,
           snap: 1,
         },
@@ -179,12 +179,12 @@ function HeadphonesPage() {
     tl.fromTo(
       ".section-three-bottom",
       {
-        xPercent: "-150",
+        xPercent: "-30",
         yPercent: "150",
         opacity: 1,
       },
       {
-        xPercent: "-150",
+        xPercent: "-30",
         yPercent: "150",
         opacity: 0,
         duration: 1,
@@ -211,8 +211,8 @@ function HeadphonesPage() {
         opacity: 1,
         scrollTrigger: {
           trigger: ".fourth",
-          start: "top center",
-          end: "bottom 100%",
+          start: "top bottom",
+          end: "bottom bottom",
           scrub: true,
           snap: 1,
         },
@@ -251,8 +251,8 @@ function HeadphonesPage() {
         opacity: 1,
         scrollTrigger: {
           trigger: ".fourth",
-          start: "top center",
-          end: "bottom 100%",
+          start: "top bottom",
+          end: "bottom bottom",
           scrub: true,
           snap: 1,
         },
@@ -290,8 +290,8 @@ function HeadphonesPage() {
         opacity: 1,
         scrollTrigger: {
           trigger: ".fifth",
-          start: "top center",
-          end: "bottom 100%",
+          start: "top bottom",
+          end: "bottom bottom",
           scrub: true,
           snap: 1,
         },
@@ -322,8 +322,8 @@ function HeadphonesPage() {
           opacity: 1,
           scrollTrigger: {
             trigger: ".fifth",
-            start: "top center",
-            end: "bottom 100%",
+            start: "top bottom",
+            end: "bottom bottom",
             scrub: true,
             snap: 1,
           },
@@ -360,8 +360,8 @@ function HeadphonesPage() {
         opacity: 1,
         scrollTrigger: {
           trigger: ".sixth",
-          start: "top center",
-          end: "bottom 100%",
+          start: "top bottom",
+          end: "bottom bottom",
           scrub: true,
           snap: 1,
         },
@@ -420,7 +420,7 @@ function HeadphonesPage() {
   return (
     <>
       <div id="content">
-        <section className="section grey">
+        <section className="section yellow-bg">
           <div className="section-one">
             <h1 className="text-border h1-headphones">Sony WH-1000XM3</h1>
           </div>
@@ -447,7 +447,7 @@ function HeadphonesPage() {
           <div></div>
         </section>
 
-        <section className="section third grey">
+        <section className="section third yellow-bg">
           <div className="section-three-top">
             <h2 className="text-border">Luxuriously Soft Padding</h2>
           </div>
@@ -481,7 +481,7 @@ function HeadphonesPage() {
           <div></div>
         </section>
 
-        <section className="section fifth grey">
+        <section className="section fifth yellow-bg">
           <div className="section-five-left">
             <h2 className="title-color-black">Multi-device Pairing</h2>
             <p className="black-text">
@@ -497,8 +497,10 @@ function HeadphonesPage() {
             />
           </div>
           <div className="section-five-right">
-            <h2 className="title-color-black">Versatile Touch Features</h2>
-            <p className="black-text">
+            <h2 className="title-color-black center-text">
+              Versatile Touch Features
+            </h2>
+            <p className="black-text center-text">
               The touch feature on the Sony WH-1000XM3 headphones offers
               intuitive control at your fingertips, allowing you to effortlessly
               manage your music playback, adjust volume, answer calls, and
