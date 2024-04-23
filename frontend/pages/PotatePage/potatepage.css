@@ -31,7 +31,7 @@ body {
   background: #34524a;
   cursor:crosshair;
 }
-.section {
+.section-potato {
   display: flex;
   width: 100vw;
   height: 100vh;
@@ -44,14 +44,14 @@ body {
  font-size: 8rem;
  line-height: 8rem;
  width: 100rem;
- 
+ transform: translate(1rem, -8rem);
 
 }
 
 .potatosubtitle {
 font-size: 5rem;
 font-weight: 300;
-transform: translate(20rem, -12rem);
+transform: translate(20rem, -17rem);
 position: absolute;
 }
 
@@ -62,7 +62,7 @@ position: absolute;
   
 }
 
-.third {
+.thirdpotato {
   font-size: 20px;
   justify-content: flex-end;
   position: relative;
@@ -71,13 +71,13 @@ position: absolute;
 
 .fourthpotato {
   justify-content: flex-end;
-  position: relative;
+  /* position: relative; */
   font-size: 24px;
   
   background-color: #97D8C4;
 }
 
-.section-one-container {
+.section-one-container-potato {
   margin-top: 10rem;
   font-family: 'Quicksand', sans-serif;
   margin-bottom: 300px;
@@ -86,18 +86,21 @@ position: absolute;
   position: relative;
 }
 
-.section-two-container {
-  /* transform: translate( -70rem, 0); */
+.section-two-container-potato {
   font-family: 'Quicksand', sans-serif;
-  width: 600px;
-  height: 200px;
+  width: 70rem;
+  height: 40rem;
   /* opacity: 0; */
   text-align: center;
   left: 3rem;
   position: relative;
+  font-size: 1.4rem;
+  line-height: 2.5;
+  
 }
 
-.section-three-container {
+
+.section-three-container-potato {
   border: #304962;
   border-style: solid;
   border-width: 0.2rem;
@@ -119,18 +122,20 @@ position: absolute;
  
 }
 
-.section-four-container {
+.section-four-container-potato {
   font-family: 'Quicksand', sans-serif;
   width: 50rem;
   text-align: center;
   transform: translate( 0rem, -10rem);
   /* margin-right: -200px; */
   /* opacity: 0; */
+ 
 }
 
-.title {
+.titlepotato {
   text-align: center;
 }
+
 .button-cart {
   font-family: 'Quicksand', sans-serif;
   background: red;
@@ -152,10 +157,3 @@ position: absolute;
   
 }
 
-.medal {
-  height: 15rem;
-  width: auto;
-  position: absolute;
-  transform: translate(33rem, -25rem) ;
- 
-}
