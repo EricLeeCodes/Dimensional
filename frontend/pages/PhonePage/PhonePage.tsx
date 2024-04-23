@@ -20,66 +20,78 @@ function Phonepage() {
   useGSAP(() => {
     const tl = gsap.timeline();
 
-    tl.to(".second-phone", {
-      xPercent: "-140",
-      opacity: 100,
-      transform: "translateX(0)",
+    tl.fromTo(".section-two-container", {
+      opacity: 0,
+      xPercent: "-30"
+    }, {
+      opacity:1,
+      xPercent: "0",
       scrollTrigger: {
         trigger: ".second-phone",
-        start: "top center",
-        end: "bottom 90%",
-        markers: true,
-        scrub: true,
-      },
-    });
+        start: "50% bottom",
+        end: "80% bottom",
+        // markers: true,
+        scrub: 1
+      }
+    } );
 
-    tl.to(".third-phone", {
-      xPercent: "-190",
-      opacity: 100,
+    tl.fromTo(".elevate-photography", 
+    {
+      xPercent: "30",
+      opacity: 0,
+    }
+    , {
+      opacity: 1,
+      xPercent: "0",
       scrollTrigger: {
         trigger: ".third-phone",
         start: "top center",
         end: "bottom 99%",
-        markers: true,
+        // markers: true,
         scrub: true,
       },
     });
 
-    tl.to(".fourth-phone", {
-      xPercent: "-170",
-      opacity: 100,
+    tl.fromTo(".craftsmanship-section", 
+    { xPercent: "30",
+    opacity: 0,
+    }, {
+      opacity: 1,
+      xPercent: "0",
       scrollTrigger: {
         trigger: ".fourth-phone",
         start: "top center",
         end: "bottom 99%",
-        markers: true,
+        // markers: true,
         scrub: true,
       },
     });
 
-    tl.to(".fifth-phone", {
-      xPercent: "200",
-      opacity: 100,
+    tl.fromTo(".selfie-section", {
+      xPercent: "-10",
+      opacity: 0}, {
+        opacity: 1,
+        xPercent: "0",
       scrollTrigger: {
         trigger: ".fifth-phone",
         start: "top center",
         end: "bottom 99%",
-        markers: true,
+        // markers: true,
         scrub: true,
       },
     });
 
-    tl.to(".sixth-phone", {
-      xPercent: "-200",
-      opacity: 100,
-      scrollTrigger: {
-        trigger: ".sixth-phone",
-        start: "top center",
-        end: "bottom 99%",
-        markers: true,
-        scrub: true,
-      },
-    });
+    // tl.to(".Brilliance", {
+    //   xPercent: "-200",
+    //   opacity: 100,
+    //   scrollTrigger: {
+    //     trigger: ".sixth-phone",
+    //     start: "top center",
+    //     end: "bottom 99%",
+    //     // markers: true,
+    //     scrub: true,
+    //   },
+    // });
   });
 
   useEffect(() => {
@@ -137,8 +149,8 @@ function Phonepage() {
 
       <section className="section-phone second-phone">
         <div className="section-two-container">
-          <h2 className="h2-phone">Power Up Faster Than Ever</h2>
-          <p className="p-phone">
+          <h2 >Power Up Faster Than Ever</h2>
+          <p >
             Experience lightning-fast charging with the iPhone 15 Pro Max. With
             its advanced technology, enjoy up to 50% charge in just 30 minutes,
             ensuring you stay powered up for whatever your day brings.
@@ -147,9 +159,9 @@ function Phonepage() {
       </section>
 
       <section className="section-phone third-phone">
-        <div className="section-two-container elevate-photography">
-          <h2 className="h2-phone">Elevate Your Photography</h2>
-          <p className="p-phone">
+        <div className="elevate-photography">
+          <h2 >Elevate Your Photography</h2>
+          <p >
             Capture life's moments in stunning detail with the iPhone 15 Pro Max
             camera. From breathtaking landscapes to close-up portraits, its
             advanced triple-camera system delivers professional-quality photos
@@ -160,10 +172,10 @@ function Phonepage() {
       </section>
 
       <section className="section-phone fourth-phone">
-        <div className="section-two-container craftsmanship-section">
-          <h2 className="h2-phone">Exquisite Craftsmanship</h2>
-          <p className="p-phone">
-            Crafted with aerospace-grade aluminum and precision-milled matte
+        <div className="craftsmanship-section">
+          <h2 >Exquisite Craftsmanship</h2>
+          <p >
+            Crafted with aerospace-grade titanium and precision-milled matte
             glass, the iPhone 15 Pro Max boasts durability and elegance.
             Featuring a Ceramic Shield front cover for enhanced protection, it's
             a masterpiece of premium materials and craftsmanship.
@@ -172,9 +184,9 @@ function Phonepage() {
       </section>
 
       <section className="section-phone fifth-phone">
-        <div className="section-two-container selfie-section">
-          <h2 className="h2-phone">Selfie Perfection</h2>
-          <p className="p-phone">
+        <div className="selfie-section">
+          <h2 >Selfie Perfection</h2>
+          <p >
             Unlock the potential of your selfies with the iPhone 15 Pro Max
             front camera. Featuring TrueDepth technology, it captures stunning
             portraits with remarkable detail and depth. With Night mode and
@@ -185,9 +197,9 @@ function Phonepage() {
       </section>
 
       <section className="section-phone sixth-phone">
-        <div className="section-two-container Brilliance">
-          <h2 className="h2-phone">Brilliance in Every Pixel</h2>
-          <p className="p-phone">
+        <div className="Brilliance">
+          <h2 >Brilliance in Every Pixel</h2>
+          <p >
             Experience brilliance with the iPhone 15 Pro Max display. Its Super
             Retina XDR OLED screen offers vivid colors and deep blacks, while
             ProMotion technology ensures smooth, responsive interactions at up

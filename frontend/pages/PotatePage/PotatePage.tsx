@@ -7,95 +7,154 @@ import {
   ScrollableCameraViewPlugin,
 } from "webgi";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"
+import { ScrollTrigger, TextPlugin } from "gsap/all";
 import { useGSAP } from "@gsap/react";
 import { useContext } from "react";
 import "./potatepage.css";
 import plate from "/potatopagepics/plate.png";
-import medal from "/potatopagepics/istockphoto-1391778705-612x612.png";
+import potato1 from "/potatopagepics/potato1.png";
+import potato2 from "/potatopagepics/potato2.png";
+import potato3 from "/potatopagepics/potato3.png";
+import potato4 from "/potatopagepics/potato4.png";
+import potato5 from "/potatopagepics/potato5.png";
+import potato6 from "/potatopagepics/potato6.png";
+import potato7 from "/potatopagepics/potato7.png"
+
+
+
 
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(TextPlugin);
 
 function PotatePage() {
   const canvasRef = useRef(null);
   const objectRef = useRef(null);
   const contextValue = useContext(ShopContext);
+
+  const addSuccess = () => {
+    toast.success("Successfully added to cart!",{
+       position: "top-right",
+    theme: "dark", 
+    })
+  }
   useGSAP(() => {
     const tl = gsap.timeline();
 
+    //title animation
+    tl.to(".potatosubtitle", {
+      duration: 2.5,
+      text: "Seductive Secrets of the Potatoe Await",
+      ease: "steps(33)",
+      delay: 1,
+    });
     //section two stuff
 
     tl.fromTo(
-      ".section-two-container",
-      {xPercent: "-250",
-        opacity: 0
-      }, {
-        xPercent: "-200",
+      ".section-two-container-potato",
+      { xPercent: "-20", opacity: 0 },
+      {
+        xPercent: "2",
         opacity: 1,
         scrollTrigger: {
-              trigger: ".second",
-              start: "top center",
-              end: "50%% center",
-              // markers: true,
-              scrub: 2,
-            }
-      }),
+          trigger: ".secondpotato",
+          start: "top bottom",
+          end: "bottom bottom",
+          markers: true,
+          scrub: 1,
+        },
+      }
+    ),
+      tl.fromTo(
+        ".section-two-container-potato",
+        { xPercent: "2", opacity: 1 },
+        {
+          xPercent: "0",
+          opacity: 0,
+          scrollTrigger: {
+            trigger: ".secondpotato",
+            start: "70% center",
+            end: "bottom center",
+            // markers: true,
+            scrub: 1,
+          },
+        }
+      ),
+      // section three stuff
+      // tl.to(".section-three-container-potato", {
+      //   xPercent: "-110",
+      //   opacity: 1,
+      //   scrollTrigger: {
+      //     trigger: ".third",
+      //     start: "top center",
+      //     end: "bottom 99%",
 
-      // tl.fromTo(
-      //   ".section-two-container",
-      //   {xPercent: "-200",
-      //     opacity: 1
-      //   }, {
-      //     xPercent: "-250",
-      //     opacity: 0,
-      //     scrollTrigger: {
-      //           trigger: ".second",
-      //           start: "80% center",
-      //           end: "bottom center",
-      //           // markers: true,
-      //           scrub: 2,
-      //         }
-      //   }),
-  
-   
-    // section three stuff
-    // tl.to(".section-three-container", {
-    //   xPercent: "-110",
-    //   opacity: 1,
-    //   scrollTrigger: {
-    //     trigger: ".third",
-    //     start: "top center",
-    //     end: "bottom 99%",
-
-    //     scrub: true,
-    //   },
-    // });
-    //section four stuff
-    tl.to(".section-four-container", {
-      xPercent: "-10",
-      opacity: 1,
-      scrollTrigger: {
-        trigger: ".fourth",
-        start: "top center",
-        end: "bottom 99%",
-
-        scrub: true,
-      },
-    });
+      //     scrub: true,
+      //   },
+      // });
+      //section four stuff
+     
 
     tl.to(".plate", {
       xPercent: "-100",
       opacity: 0,
       scrollTrigger: {
-        trigger: ".section",
-        start: "10% top",
-        end: "center ",
+        trigger: ".section-one-container-potato",
+        start: "-60% top",
+        end: "-30% ",
         // markers: true,
-        scrub: 2,
+        scrub: 1,
       },
     });
 
-   
+    tl.to(".potatopics", {
+      duration:1,
+      opacity: 1,
+      from: "random",
+      delay:0.2,
+      stagger: 0.2,
+      ease: "power2",
+      scrollTrigger: {
+        trigger: ".thirdpotato",
+        start: "20% center",
+        end: "70% 70%",
+        // markers: true,
+        scrub: 1
+      }
+    })
+
+    tl.fromTo(".endingtitle", {
+      opacity:0,
+      y: 100,
+    },{ 
+      y: 0,
+      opacity:1,
+      stagger: 0.25,
+      scrollTrigger: {
+        trigger: ".fourthpotato",
+        start: "top center",
+        end: "center center",
+        scrub: 1,
+        // markers: true
+      }
+    })
+
+    tl.fromTo(".endingsubtitle", {
+      opacity:0,
+      y: 100,
+    },{ 
+      y: 0,
+      opacity:1,
+      stagger: 0.05,
+      scrollTrigger: {
+        trigger: ".fourthpotato",
+        start: "40% center",
+        end: "center center",
+        scrub: 1,
+        // markers: true
+      }
+    })
   });
 
   useEffect(() => {
@@ -144,60 +203,78 @@ function PotatePage() {
   return (
     <>
       <div>
-        <section className="section first">
-          <div className="section-one-container">
-            <h1 className="potatotitle">The Potato of Destiny</h1>
+        <section className="section-potato first">
+          <div className="section-one-container-potato">
+            <h1 className="potatotitle">Unlock Your Destiny:</h1>
+            <h2 className="potatosubtitle"></h2>
             <img src={plate} alt="Plate" className="plate" />
-           
           </div>
         </section>
+
+        <section className="section-potato secondpotato">
+          <div className="section-two-container-potato">
+            <h3 className="potatotextone title2">Nutritional Powerhouse</h3>
+            <p className="potatotextone">
+               Potatoes are a versatile and nutritious
+              choice, packed with essential vitamins, minerals, and fiber like
+              vitamin C, potassium, and fiber, promoting heart health and aiding
+              digestion. Their varied preparation methods, from mashed to
+              roasted, offer delicious ways to incorporate vital nutrients into
+              your diet.
+            </p>
+            <h3 className="potatotexttwo title2">Sustainable Staple</h3>
+            <p className="potatotexttwo">
+               Potatoes are a sustainable crop with a
+              relatively low environmental impact, requiring less water and land
+              compared to other staples. Supporting potato cultivation can
+              contribute to eco-friendly farming practices and sustainable food
+              systems, benefiting both the environment and communities.
+            </p>
+            <h3 className="potatotextthree title2">Budget-Friendly Option</h3>
+            <p className="potatotextthree">
+               Potatoes are a remarkably affordable
+              choice for consumers, with widespread availability and a low cost
+              per pound. Their versatility allows for countless affordable meal
+              options, making them a cornerstone of nutritious eating for people
+              of all income levels.
+            </p>
+          </div>
         
-        <section className="section secondpotato">
-          <div className="section-two-container">
-            <h2 className="sectiontwotitle">The Epicurean's Choice</h2>
-            <p className="sectiontwocontent">
-              Indulge in the culinary splendor of the humble yet majestic
-              potato, an epitome of gastronomic delight. Crafted by nature's
-              finest hands and nurtured in fertile soils, each potato embodies a
-              symphony of flavors waiting to be discovered. Whether roasted to
-              golden perfection, mashed into creamy decadence, or crisped into
-              delightful chips, the versatility of this earthly gem knows no
-              bounds. Elevate your culinary repertoire and enchant your taste
-              buds with the unparalleled charm of the potato.
-            </p>
-          </div>
         </section>
 
-        <section className="section third">
+        <section className="section-potato thirdpotato">
           <div className="section-three-container">
-            <p className="sectionthreetitle">The Epicurean's Choice</p>
-            <p>
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum."
-            </p>
+            <p className="sectionthreetitle">Versatility.</p>
+            <img src={potato1} alt="potato1" className="potato1 potatopics" />
+            <img src={potato2} alt="potato2" className="potato2 potatopics" />
+            <img src={potato3} alt="potato3" className="potato3 potatopics" />
+            <img src={potato4} alt="potato4" className="potato4 potatopics" />
+            <img src={potato5} alt="potato5" className="potato5 potatopics" />
+            <img src={potato6} alt="potato6" className="potato6 potatopics" />
+            <img src={potato7} alt="potato7" className="potato7 potatopics" />
           </div>
         </section>
 
-        <section className="section fourthpotato">
-          <div className="section-four-container">
-            <span>You hungry?</span>
-          </div>
+        <section className="section-potato fourthpotato">
+          <div className="section-four-container-potato">
+            <div className="endingtitle">Taste the Magic, </div>
+            <div className="endingsubtitle">Join Us</div>
+            <div className="button-potato-page">
+              <button className="potatobutton"
+                onClick={() => contextValue && contextValue!.addToCart(3)}
+              >
+                Add To Cart
+              </button><button className="potatobutton">Back to top</button>
+            </div>
+          </div><ToastContainer />
         </section>
-        <button className="back">Back to top</button>
-        <button
-          className="addToCartButton"
-          onClick={() => contextValue && contextValue!.addToCart(3)}
-        >
-          Add To Cart
-        </button>
+
+        
+          
         <div id="webgi-canvas-container">
           <canvas id="webgi-canvas" ref={canvasRef}></canvas>
         </div>
+        
         {/* <script src="/home/labber/lighthouse/Dimensional/frontend/pages/PotatePage/potate.ts" type="module"></script> */}
         <script
           type="module"
