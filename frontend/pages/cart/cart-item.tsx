@@ -18,15 +18,22 @@ export const CartItem: React.FC<CartItemProps> = (props) => {
 
   return (
     <div className="cart-item">
-      <img src={productImage} alt="Product Image" />
-      <div className="description">
+      <div className="cart-img">
+        <img src={productImage} alt="Product Image" />
+      </div>
+      <div className="name">
         <p>
           <b>{productName}</b>
         </p>
         <p>${price.toFixed(2)}</p>
       </div>
       <div className="countHandler">
-        <button onClick={() => contextValue!.removeFromCart(id)}> - </button>
+        <button
+          onClick={() => contextValue!.removeFromCart(id)}
+          className="minus"
+        >
+          -
+        </button>
         <input
           type="number"
           value={contextValue!.cartItems[id] || 1}
@@ -34,7 +41,10 @@ export const CartItem: React.FC<CartItemProps> = (props) => {
             contextValue!.updateCartItemCount(Number(e.target.value), id)
           }
         />
-        <button onClick={() => contextValue!.addToCart(id)}> + </button>
+        <button onClick={() => contextValue!.addToCart(id)} className="plus">
+          {" "}
+          +
+        </button>
       </div>
     </div>
   );
