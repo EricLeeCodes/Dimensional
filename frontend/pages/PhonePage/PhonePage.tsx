@@ -5,10 +5,17 @@ import {
   AssetManagerPlugin,
   ScrollableCameraViewPlugin,
 } from "webgi";
+
+import cameleon from "./images/cameleon.jpg";
+import battery from "./images/charge.png";
+import graphiccard from "./images/graphiccard.png";
+import landscape from "./images/landscape.png";
+import selfie from "./images/selfie.jpeg";
+import iphone from "./images/iphone.png";
+
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useGSAP } from "@gsap/react";
-//potate
 import "./phonepage.css";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -81,17 +88,20 @@ function Phonepage() {
       },
     });
 
-    // tl.to(".Brilliance", {
-    //   xPercent: "-200",
-    //   opacity: 100,
-    //   scrollTrigger: {
-    //     trigger: ".sixth-phone",
-    //     start: "top center",
-    //     end: "bottom 99%",
-    //     // markers: true,
-    //     scrub: true,
-    //   },
-    // });
+    tl.fromTo(".Brilliance", 
+    { xPercent: "30",
+    opacity: 0,
+    }, {
+      opacity: 1,
+      xPercent: "0",
+      scrollTrigger: {
+        trigger: ".sixth-phone",
+        start: "top center",
+        end: "bottom 99%",
+        // markers: true,
+        scrub: true,
+      },
+    });
   });
 
   useEffect(() => {
@@ -144,7 +154,7 @@ function Phonepage() {
   return (
     <div>
       <section className="section-phone">
-        <h1 className="h1-phone">iPhone 15 Pro Max</h1>
+        <h1 className="h1-phone" id="iphone-heading">iPhone 15 Pro Max</h1>
       </section>
 
       <section className="section-phone second-phone">
@@ -155,6 +165,11 @@ function Phonepage() {
             its advanced technology, enjoy up to 50% charge in just 30 minutes,
             ensuring you stay powered up for whatever your day brings.
           </p>
+          <img
+              src={battery}
+              alt="fast charging description"
+              className="battery-img"
+            />
         </div>
       </section>
 
@@ -168,6 +183,16 @@ function Phonepage() {
             and videos, even in low light. With features like ProRAW and
             Cinematic Mode, unleash your creativity like never before.
           </p>
+          <img
+              src={cameleon}
+              alt="Lovely cameleon picture"
+              className="cameleon-img"
+            />
+              <img
+              src={landscape}
+              alt="amazing landscape"
+              className="landscape-img"
+            />
         </div>
       </section>
 
@@ -181,6 +206,11 @@ function Phonepage() {
             a masterpiece of premium materials and craftsmanship.
           </p>
         </div>
+          <img
+              src={iphone}
+              alt="side view of iphone 15 pro max"
+              className="iphone-img"
+            />
       </section>
 
       <section className="section-phone fifth-phone">
@@ -193,6 +223,11 @@ function Phonepage() {
             Smart HDR 4, every selfie shines, day or night, ensuring you always
             look your best
           </p>
+          <img
+              src={selfie}
+              alt="Gorgeous group of people"
+              className="selfie-img"
+            />
         </div>
       </section>
 
@@ -205,8 +240,18 @@ function Phonepage() {
             ProMotion technology ensures smooth, responsive interactions at up
             to 120Hz.
           </p>
+          <img
+              src={graphiccard}
+              alt="iphone processing chip"
+              className="graphiccard-img"
+            />
         </div>
-      </section>
+      
+  <div className="additional-title">
+    <h2>iPhone 15 Pro Max</h2>
+    <p>Where Brilliance Meets Boundlessness!</p>
+  </div>
+</section>
 
       <div id="webgi-canvas-container">
         <canvas id="webgi-canvas" ref={canvasRef}></canvas>

@@ -20,6 +20,8 @@
   height: 100vh;
   align-items: center;
   z-index: -1;
+  color: black
+  position: relative;
 }
 
 .power-up {
@@ -65,32 +67,38 @@
   /* margin-top: -200px; */
   max-width: 100%;
   /* transition: margin-left 1.5s ease; */
-  background-color: aqua;
+  background-color: #c2ab81;
+  color: black;
 }
 
 .third-phone {
   position: relative;
-  /* margin-left: 200%; */
+  margin-top: 130px;
   width: 100%;
+  color: black;
 }
 
 .fourth-phone {
   position: relative;
   /* margin-left: 200%; */
   width: 100vw;
-  background-color: aqua;
+  background-color: #c2ab81;
+  height: 100vh;
+  color: black;
 }
 
 .fifth-phone {
   position: relative;
   width: 100%;
+  color: black;
 }
 
 .sixth-phone {
   position: relative;
   /* margin-left: 100%; */
   width: 100%;
-  background-color: aquamarine;
+  background-color: #c2ab81;
+  color: black;
 }
 
 .h1-phone {
@@ -98,6 +106,13 @@
   font-size: 8rem;
   line-height: 8rem;
 }
+
+#iphone-heading {
+    font-size: 5.3rem; /* Adjust this value to your desired font size */
+    line-height: 4rem; /* Adjust this value as needed */
+    color: #000000; /* Optionally, adjust the color */
+  }
+  
 
 .h2-phone {
   font-size: 1.2rem;
@@ -150,10 +165,6 @@
   bottom: 600px; /* Adjust this value to your preference */
   left: 35%;
   transform: translateX(-50%);
-  /*background-color: #ffffff; /* Optional: Set background color */
-  /*padding: 10px 20px; /* Optional: Add padding */
-  /* border-radius: 5px; /* Optional: Add border radius */
-  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add box shadow */
   z-index: 1000; /* Ensure it appears above other content */
 }
 
@@ -169,19 +180,74 @@
   padding: 10px 30px;
 }
 
-/* .section {
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    align-items: center;
-    z-index: -1;
-    transition: transform 0.5s ease; 
-/* } */
 
-/* .slide-from-left {
-    transform: translateX(-100%);
-}
 
-.slide-from-right {
-    transform: translateX(100%);
-} */
+.additional-title {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 1000;
+  }
+  
+  .seventh-phone {
+    position: relative;
+    width: 100%;
+  }
+  
+  .additional-title {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1000;
+    font-size: 28px;
+  }
+
+
+  .battery-img {
+    width: 200px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    position: absolute;
+    top: 50%; /* Adjust vertically */
+    left: 10%; /* Adjust horizontally */
+    transform: translate(-50%, -50%);
+  }
+  
+  .cameleon-img {
+    width: 300px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    transform: translateY(50px);
+  }
+  
+  .landscape-img {
+    width: 400px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    transform: translateY(80px); 
+  }
+  
+  
+.iphone-img {
+    width: 250px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    position: absolute;
+    left: 0; /* Move the image to the left side of its containing element */
+    transform: translate(20rem, 15rem);
+  }
+  
+  .selfie-img {
+    width: 350px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .graphiccard-img {
+    width: 350px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    position: absolute;
+    left: -450px; /* Reset the left position to ensure it's aligned to the left side */
+    transform: translateX(-50%);
+    top: -20px; 
+  }
+  
