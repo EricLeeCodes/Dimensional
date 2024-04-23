@@ -13,12 +13,14 @@ function Cart() {
   return (
     <div className="cart">
       <h1>Your Cart Items</h1>
-      <div className="cartItems">
+      <div>
         {totalAmount > 0 ? (
           Products.map((product) => {
             const quantity = contextValue?.cartItems[product.id] || 0;
             if (quantity > 0) {
-              return <CartItem key={product.id} data={product} quantity={quantity} />;
+              return (
+                <CartItem key={product.id} data={product} quantity={quantity} />
+              );
             }
             return null;
           })
@@ -26,11 +28,16 @@ function Cart() {
           <p>Your cart is empty</p>
         )}
       </div>
+
       {totalAmount > 0 && (
-        <div className="checkout">
-          <p> Subtotal: ${totalAmount}</p>
-          <button onClick={() => navigate("/")}>Continue Shopping</button>
-          <button onClick={() => navigate("/thankyou")}>Checkout</button>
+        <div>
+          <div className="cart-subtotal">
+            <p> Subtotal: ${totalAmount}</p>
+          </div>
+          <div className="checkout">
+            <button onClick={() => navigate("/")}>Continue Shopping</button>
+            <button onClick={() => navigate("/thankyou")}>Checkout</button>{" "}
+          </div>
         </div>
       )}
     </div>

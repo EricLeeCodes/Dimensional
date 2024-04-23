@@ -2,6 +2,7 @@ import { useRef, useEffect, useContext } from "react";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
 import { Link } from "react-router-dom";
 import { ShopContext } from "../../src/context/shop-context.tsx";
 import {
@@ -297,7 +298,7 @@ function HeadphonesPage() {
       }
     );
     tl.fromTo(
-      ".section-five-right",
+      ".section-five-left",
       {
         opacity: 1,
       },
