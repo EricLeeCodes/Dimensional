@@ -21,6 +21,7 @@
   align-items: center;
   z-index: -1;
   color: black
+  position: relative;
 }
 
 .power-up {
@@ -67,12 +68,14 @@
   max-width: 100%;
   /* transition: margin-left 1.5s ease; */
   background-color: #c2ab81;
+  color: black;
 }
 
 .third-phone {
   position: relative;
-  /* margin-left: 200%; */
+  margin-top: 130px;
   width: 100%;
+  color: black;
 }
 
 .fourth-phone {
@@ -80,11 +83,14 @@
   /* margin-left: 200%; */
   width: 100vw;
   background-color: #c2ab81;
+  height: 100vh;
+  color: black;
 }
 
 .fifth-phone {
   position: relative;
   width: 100%;
+  color: black;
 }
 
 .sixth-phone {
@@ -92,6 +98,7 @@
   /* margin-left: 100%; */
   width: 100%;
   background-color: #c2ab81;
+  color: black;
 }
 
 .h1-phone {
@@ -198,3 +205,49 @@
     z-index: 1000;
     font-size: 28px;
   }
+
+
+  .battery-img {
+    width: 200px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    position: absolute;
+    top: 50%; /* Adjust vertically */
+    left: 10%; /* Adjust horizontally */
+    transform: translate(-50%, -50%);
+  }
+  
+  .cameleon-img {
+    width: 300px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    transform: translateY(50px);
+  }
+  
+  .landscape-img {
+    width: 400px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    transform: translateY(80px); 
+  }
+  
+  
+.iphone-img {
+    width: 250px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    position: absolute;
+    left: 0; /* Move the image to the left side of its containing element */
+    transform: translate(20rem, 15rem);
+  }
+  
+  .selfie-img {
+    width: 350px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .graphiccard-img {
+    width: 350px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    position: absolute;
+    left: -450px; /* Reset the left position to ensure it's aligned to the left side */
+    transform: translateX(-50%);
+    top: -20px; 
+  }
+  
