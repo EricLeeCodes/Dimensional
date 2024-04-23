@@ -8,7 +8,6 @@ import {
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useGSAP } from "@gsap/react";
-//potate
 import "./phonepage.css";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -81,17 +80,20 @@ function Phonepage() {
       },
     });
 
-    // tl.to(".Brilliance", {
-    //   xPercent: "-200",
-    //   opacity: 100,
-    //   scrollTrigger: {
-    //     trigger: ".sixth-phone",
-    //     start: "top center",
-    //     end: "bottom 99%",
-    //     // markers: true,
-    //     scrub: true,
-    //   },
-    // });
+    tl.fromTo(".Brilliance", 
+    { xPercent: "30",
+    opacity: 0,
+    }, {
+      opacity: 1,
+      xPercent: "0",
+      scrollTrigger: {
+        trigger: ".sixth-phone",
+        start: "top center",
+        end: "bottom 99%",
+        // markers: true,
+        scrub: true,
+      },
+    });
   });
 
   useEffect(() => {
@@ -144,7 +146,7 @@ function Phonepage() {
   return (
     <div>
       <section className="section-phone">
-        <h1 className="h1-phone">iPhone 15 Pro Max</h1>
+        <h1 className="h1-phone" id="iphone-heading">iPhone 15 Pro Max</h1>
       </section>
 
       <section className="section-phone second-phone">
@@ -206,7 +208,12 @@ function Phonepage() {
             to 120Hz.
           </p>
         </div>
-      </section>
+      
+  <div className="additional-title">
+    <h2>iPhone 15 Pro Max</h2>
+    <p>Where Brilliance Meets Boundlessness!</p>
+  </div>
+</section>
 
       <div id="webgi-canvas-container">
         <canvas id="webgi-canvas" ref={canvasRef}></canvas>
