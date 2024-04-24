@@ -7,6 +7,7 @@ import {
   ScrollableCameraViewPlugin,
 } from "webgi";
 import gsap from "gsap";
+import { Link } from "react-router-dom"
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"
 import { ScrollTrigger, TextPlugin } from "gsap/all";
@@ -45,7 +46,7 @@ function PotatePage() {
     //title animation
     tl.to(".potatosubtitle", {
       duration: 2.5,
-      text: "Seductive Secrets of the Potatoe Await",
+      text: "Seductive Secrets of the Potato Await",
       ease: "steps(33)",
       delay: 1,
     });
@@ -61,8 +62,9 @@ function PotatePage() {
           trigger: ".secondpotato",
           start: "top bottom",
           end: "bottom bottom",
-          markers: true,
+          // markers: true,
           scrub: 1,
+          snap: 1,
         },
       }
     ),
@@ -111,16 +113,20 @@ function PotatePage() {
     tl.to(".potatopics", {
       duration:1,
       opacity: 1,
-      from: "random",
+      
       delay:0.2,
-      stagger: 0.2,
+      stagger:  {
+        from: "random",
+        each: 0.2
+      },
       ease: "power2",
       scrollTrigger: {
         trigger: ".thirdpotato",
         start: "20% center",
         end: "70% 70%",
         // markers: true,
-        scrub: 1
+        scrub: 1,
+        snap: 1,
       }
     })
 
@@ -136,6 +142,7 @@ function PotatePage() {
         start: "top center",
         end: "center center",
         scrub: 1,
+        snap: 1,
         // markers: true
       }
     })
@@ -259,14 +266,19 @@ function PotatePage() {
           <div className="section-four-container-potato">
             <div className="endingtitle">Taste the Magic, </div>
             <div className="endingsubtitle">Join Us</div>
-            <div className="button-potato-page">
+          </div><div className="button-potato-page">
               <button className="potatobutton"
-                onClick={() => contextValue && contextValue!.addToCart(3)}
+                onClick={() => { contextValue && contextValue!.addToCart(3);
+                  addSuccess();
+                }
+                }
               >
                 Add To Cart
-              </button><button className="potatobutton">Back to top</button>
+              </button>
+              <Link to="/"><button className="potatobutton">Back to Home</button> </Link>
+              
             </div>
-          </div><ToastContainer />
+            <div className="toastcontainer-potato"><ToastContainer /></div>
         </section>
 
         

@@ -9,6 +9,7 @@ import PhonePage from "../pages/PhonePage/PhonePage.tsx";
 import HeadphonesPage from "../pages/HeadphonesPage/HeadphonesPage.tsx";
 //Delete DBTestPage
 import DBTestPage from "../pages/DBTestPage/DBTestPage.tsx";
+import Aboutus from "../pages/Aboutus/Aboutus.tsx";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
     path: "/dbtest",
     element: <DBTestPage />,
   },
+  {
+    path: "/aboutus",
+    element: <Aboutus />,
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

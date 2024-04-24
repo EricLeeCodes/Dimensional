@@ -32,7 +32,7 @@ function Cart() {
       {totalAmount > 0 && (
         <div>
           <div className="cart-subtotal">
-            <p> Subtotal: ${totalAmount}</p>
+            <p> Subtotal: ${totalAmount.toFixed(2)}</p>
           </div>
           <div className="checkout">
             <button onClick={() => navigate("/")}>Continue Shopping</button>

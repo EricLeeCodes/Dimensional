@@ -34,13 +34,13 @@
   margin: 0;
 }
 
-.cart-item button {
+/* .cart-item button {
   background-color: rgb(19, 19, 19);
   color: white;
   padding: 5px 15px;
   margin: 4px 2px;
   cursor: pointer;
-}
+} */
 
 .cart-item .countHandler input {
   width: 40px;
@@ -57,5 +57,33 @@
 }
 
 .countHandler {
-  margin-right: 50px;
+  width: 10rem;
+  display: flex;
+  justify-content: space-between;
+  transform: translate(-5rem);
+}
+
+.countHandler input[type="number"]::-webkit-outer-spin-button,
+.countHandler input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.minus {
+  /* width: 1rem; */
+  background-color: black(253, 63, 63);
+  color: white;
+  padding: 5px 15px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4rem;
+}
+
+.plus {
+  background-color: black(48, 48, 255);
+  color: white;
+  padding: 5px 15px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4rem;
 }

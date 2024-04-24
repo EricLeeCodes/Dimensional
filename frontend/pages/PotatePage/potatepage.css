@@ -37,6 +37,7 @@
   height: 100vh;
   align-items: center;
   z-index: -1;
+  color: #304962;
 }
 
 .potatotitle {
@@ -241,11 +242,17 @@ opacity: 0;
 }
 .potatobutton {
   color: white;
+  font-size: 1rem;
 }
 
 .button-potato-page {
-  width: 30rem;
-  transform: translate(60rem, 7rem);
+  width: 25rem;
+  transform: translate(-35rem, 3rem);
   display: flex;
   justify-content: space-between;
+  position: absolute;
+
+}
+.toastcontainer-potato {
+  font-size: 1rem;
 }

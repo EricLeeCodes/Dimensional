@@ -1,0 +1,98 @@
+.aboutus {
+  width: 100vw;
+  height: 100vh;
+  /* position: relative; */
+  text-align: center;
+  color: black;
+}
+
+.aboutusintro {
+  font-size: 3rem;
+  transform: translate(7rem, 20rem);
+  text-align: center;
+  padding-left: 3rem;
+  width: 80%;
+  color: black;
+  position: absolute;
+}
+
+.section-jake {
+transform: translate(0rem, 14rem);
+left: 3rem;
+position: absolute;
+font-size: 1.3rem;
+width: 50rem;
+text-align: left;
+/* opacity: 0; */
+}
+
+.section-daniel {
+transform: translate(65rem, 20rem);
+left: 3rem;
+position: absolute;
+font-size: 1.3rem;
+width: 50rem;
+text-align: left;
+/* opacity: 0; */
+}
+
+.section-eric {
+  transform: translate(0rem, 39rem);
+  left: 3rem;
+  position: absolute;
+  font-size: 1.3rem;
+  width: 50rem;
+  text-align: left;
+  /* opacity: 0; */
+}
+
+.aboutustitle {
+  font-weight: 700;
+}
+
+.socials {
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 35rem;
+  padding-left: 5rem;
+}
+
+.socialsalign {
+  display: flex;
+  justify-content: center;
+}
+
+.jakepic {
+  height: 14rem;
+  position: absolute;
+  transform: translate(-63rem, 8rem);
+  scale: 0.7;
+  border-radius: 1rem;
+  border-style: solid;
+  border-color: gray;
+  border-width: 0.4rem;
+}
+
+.danielpic {
+  height: 14rem;
+  position: absolute;
+  transform: translate(36rem, 16rem);
+  scale: 0.7;
+  border-radius: 1rem;
+  border-style: solid;
+  border-color: gray;
+  border-width: 0.4rem;
+}
+
+.ericpic {
+  height: 14rem;
+  position: absolute;
+  transform: translate(-64rem, 43rem);
+  scale: 0.7;
+  border-radius: 1rem;
+  border-style: solid;
+  border-color: gray;
+  border-width: 0.4rem;
+}
