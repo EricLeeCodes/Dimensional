@@ -129,7 +129,7 @@ function Phonepage() {
         viewer.renderer.refreshPipeline();
 
         // Load a 3D model
-        const object = await manager.addFromPath("/phone.glb");
+        const object = await manager.addFromPath("/phoneFixed.glb");
 
         // Set the reference to the 3D object
         objectRef.current = object;

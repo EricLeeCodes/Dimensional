@@ -125,7 +125,7 @@ function PotatePage() {
         start: "20% center",
         end: "70% 70%",
         // markers: true,
-        scrub: 1,
+        scrub: 2.5,
         snap: 1,
       }
     })
