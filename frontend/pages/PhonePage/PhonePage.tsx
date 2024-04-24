@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useContext } from "react";
 import {
   ViewerApp,
   addBasePlugins,
@@ -13,6 +13,12 @@ import landscape from "./images/landscape.png";
 import selfie from "./images/selfie.jpeg";
 import iphone from "./images/iphone.png";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+import { Link } from "react-router-dom";
+import { ShopContext } from "../../src/context/shop-context.tsx";
+
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useGSAP } from "@gsap/react";
@@ -23,6 +29,12 @@ gsap.registerPlugin(ScrollTrigger);
 function Phonepage() {
   const canvasRef = useRef(null);
   const objectRef = useRef(null);
+
+  const addSuccess = () =>
+    toast.success("Successfully added to cart!", {
+      position: "top-right",
+      theme: "dark",
+    });
 
   useGSAP(() => {
     const tl = gsap.timeline();
@@ -37,7 +49,7 @@ function Phonepage() {
         trigger: ".second-phone",
         start: "50% bottom",
         end: "80% bottom",
-        // markers: true,
+        
         scrub: 1
       }
     } );
@@ -54,7 +66,7 @@ function Phonepage() {
         trigger: ".third-phone",
         start: "top center",
         end: "bottom 99%",
-        // markers: true,
+        
         scrub: true,
       },
     });
@@ -69,7 +81,7 @@ function Phonepage() {
         trigger: ".fourth-phone",
         start: "top center",
         end: "bottom 99%",
-        // markers: true,
+        
         scrub: true,
       },
     });
@@ -83,7 +95,7 @@ function Phonepage() {
         trigger: ".fifth-phone",
         start: "top center",
         end: "bottom 99%",
-        // markers: true,
+        
         scrub: true,
       },
     });
@@ -98,18 +110,14 @@ function Phonepage() {
         trigger: ".sixth-phone",
         start: "top center",
         end: "bottom 99%",
-        // markers: true,
+        
         scrub: true,
       },
     });
   });
-
+  const contextValue = useContext(ShopContext);
   useEffect(() => {
     let viewer;
-    // const script = document.createElement('script')
-    // script.src = "frontend/pages/PotatePage/potate.ts"
-    // script.async =true;
-    // document.body.appendChild(script)
     const setupViewer = async () => {
       viewer = new ViewerApp({
         canvas: canvasRef.current,
@@ -152,7 +160,8 @@ function Phonepage() {
   }, []);
 
   return (
-    <div>
+    <>
+        <div>
       <section className="section-phone">
         <h1 className="h1-phone" id="iphone-heading">iPhone 15 Pro Max</h1>
       </section>
@@ -251,12 +260,31 @@ function Phonepage() {
     <h2>iPhone 15 Pro Max</h2>
     <p>Where Brilliance Meets Boundlessness!</p>
   </div>
-</section>
 
+        </section>
+<div className="phone-buttons">
+              <button
+                onClick={() => {
+                  if (contextValue) {
+                    contextValue.addToCart(2); // Add to cart
+                    addSuccess();
+                  }
+                }}
+              >
+                Add To Cart
+              </button>
+
+              <Link to="/">
+                <button>Back to Home</button>
+              </Link>
+            </div>
+      </div>
+      <ToastContainer />
       <div id="webgi-canvas-container">
         <canvas id="webgi-canvas" ref={canvasRef}></canvas>
       </div>
-    </div>
+
+      </>
   );
 }
 export default Phonepage;
