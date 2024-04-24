@@ -95,7 +95,7 @@
 }
 
 .sixth-phone {
-  position: relative;
+  /* position: relative; */
   /* margin-left: 100%; */
   width: 100%;
   background-color: #c2ab81;
@@ -185,11 +185,9 @@
     display: flex;
     justify-content: center;
     position: absolute;
-    bottom: 0; 
-    left: 0; 
-    right: 800px; 
-    transform: translate(60rem, 278rem);
-    
+    transform: translate(35rem, -18rem);
+    background-color: #c2ab81;
+    width: 100vw;
   }
   
   .phone-buttons button {

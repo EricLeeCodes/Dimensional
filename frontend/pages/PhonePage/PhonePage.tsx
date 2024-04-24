@@ -268,14 +268,15 @@ function Phonepage() {
               className="graphiccard-img"
             />
         </div>
-      
+        
   <div className="additional-title">
     <h2>iPhone 15 Pro Max</h2>
     <p>Where Brilliance Meets Boundlessness!</p>
   </div>
 
         </section>
-<div className="phone-buttons">
+
+      </div><div className="phone-buttons">
               <button
                 onClick={() => {
                   if (contextValue) {
@@ -291,7 +292,6 @@ function Phonepage() {
                 <button>Back to Home</button>
               </Link>
             </div>
-      </div>
       <ToastContainer />
       <div id="webgi-canvas-container">
         <canvas id="webgi-canvas" ref={canvasRef}></canvas>
