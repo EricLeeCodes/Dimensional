@@ -59,6 +59,7 @@
   /* margin-right: 10%; */
   transform: translate(70rem, 0rem);
   font-size: 1.5rem;
+  text-align: center;
 }
 
 .second-phone {
@@ -108,9 +109,9 @@
 }
 
 #iphone-heading {
-    font-size: 5.3rem; /* Adjust this value to your desired font size */
-    line-height: 4rem; /* Adjust this value as needed */
-    color: #000000; /* Optionally, adjust the color */
+    font-size: 5.3rem; 
+    line-height: 4rem; 
+    color: #000000; 
   }
   
 
@@ -162,16 +163,16 @@
 
 #last-h1 {
   position: fixed;
-  bottom: 600px; /* Adjust this value to your preference */
+  bottom: 600px; 
   left: 35%;
   transform: translateX(-50%);
-  z-index: 1000; /* Ensure it appears above other content */
+  z-index: 1000; 
 }
 
 .fixed-button {
   position: fixed;
-  bottom: 400px; /* Adjust as needed */
-  left: 500px; /* Adjust as needed */
+  bottom: 400px; 
+  left: 500px; 
   transform: translateY(50%);
   background: #000000;
   color: #ffffff;
@@ -180,7 +181,18 @@
   padding: 10px 30px;
 }
 
-
+.phone-buttons {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 100px; 
+    left: 0; 
+    right: 800px; 
+  }
+  
+  .phone-buttons button {
+    margin: 0 10px; 
+  }
 
 .additional-title {
     position: fixed;
@@ -203,50 +215,50 @@
     transform: translate(-50%, -50%);
     text-align: center;
     z-index: 1000;
-    font-size: 28px;
+    font-size: 38px;
   }
 
 
   .battery-img {
-    width: 200px; /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
+    width: 200px; 
+    height: auto; 
     position: absolute;
-    top: 50%; /* Adjust vertically */
-    left: 10%; /* Adjust horizontally */
-    transform: translate(-50%, -50%);
+    top: 50%; 
+    right: -220%; 
+    transform: translate(50%, -50%); 
   }
   
   .cameleon-img {
-    width: 300px; /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
+    width: 300px; 
+    height: auto; 
     transform: translateY(50px);
   }
   
   .landscape-img {
-    width: 400px; /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
+    width: 400px; 
+    height: auto; 
     transform: translateY(80px); 
   }
   
   
 .iphone-img {
-    width: 250px; /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
+    width: 450px; 
+    height: auto; 
     position: absolute;
-    left: 0; /* Move the image to the left side of its containing element */
+    left: -15%; 
     transform: translate(20rem, 15rem);
   }
   
   .selfie-img {
-    width: 350px; /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
+    width: 350px; 
+    height: auto; 
   }
   
   .graphiccard-img {
-    width: 350px; /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
+    width: 350px; 
+    height: auto; 
     position: absolute;
-    left: -450px; /* Reset the left position to ensure it's aligned to the left side */
+    left: -550px; 
     transform: translateX(-50%);
     top: -20px; 
   }
