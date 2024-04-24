@@ -467,7 +467,7 @@ function HeadphonesPage() {
             <img
               src={battery}
               alt="Long lasting battery explanation"
-              className="battery-img"
+              className="battery-img-headphones"
             />
           </div>
           <div className="section-four-left">

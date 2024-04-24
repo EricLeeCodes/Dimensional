@@ -1,7 +1,9 @@
+import "./cart.css"
+
 function ThankYou() {
   return (
     <>
-      <h1>Thank you for your purchase!</h1>
+      <h1 className="thankyou">Thank you for watching!!</h1>
     </>
   );
 }

@@ -5,6 +5,7 @@
   align-items: center;
   height: 100vh;
   width: 100vw;
+  color: black;
 }
 
 .cart h1 {
@@ -50,4 +51,9 @@
 
 .product-table {
   font-family: Arial, sans-serif;
+}
+
+.thankyou {
+color: black;
+transform: translate(42rem);
 }
