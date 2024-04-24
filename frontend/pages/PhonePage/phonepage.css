@@ -20,7 +20,7 @@
   height: 100vh;
   align-items: center;
   z-index: -1;
-  color: black
+  color: black;
   position: relative;
 }
 
@@ -184,10 +184,12 @@
 .phone-buttons {
     display: flex;
     justify-content: center;
-    position: fixed;
-    bottom: 100px; 
+    position: absolute;
+    bottom: 0; 
     left: 0; 
     right: 800px; 
+    transform: translate(60rem, 278rem);
+    
   }
   
   .phone-buttons button {

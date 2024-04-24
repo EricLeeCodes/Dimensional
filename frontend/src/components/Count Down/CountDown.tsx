@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import "./countdown.module.css";
 
 function CountDown() {
-  const [countDown, setCountDown] = useState(6);
+  const [countDown, setCountDown] = useState(10);
   const timer = useRef();
 
   useEffect(() => {

@@ -18,7 +18,7 @@ function Aboutus() {
     const tl = gsap.timeline();
 
     tl.to(".aboutusintro", {
-      delay: 6,
+      delay: 10,
       opacity: 0,
       xPercent: "10",
       yPercent: "-20",
@@ -33,38 +33,38 @@ function Aboutus() {
         duration: 2.6,
         xPercent: "0",
         opacity: 1,
-        delay: 6,
+        delay: 10,
       }
     );
 
     gsap.to(".section-jake-content", {
       duration: 2,
       // ease: "power4.in",
-      delay: 6,
+      delay: 10,
       text: {
         value:
           "As the visionary behind Dimensional, Jake brings boundless creativity and an unwavering commitment to innovation. With a keen eye for detail and a passion for pushing boundaries, Jake leads our team in crafting unique and impactful experiences for our users.",
-        speed: 4,
+        speed: 47,
       },
     });
 
     gsap.to(".section-daniel-content", {
       duration: 2,
-      delay: 6,
+      delay: 10,
       text: {
         value:
           "At the heart of our design process is Daniel, the creative force driving our visual identity. With a flair for design and a deep understanding of user experience, Daniel brings concepts to life with style and sophistication. Their passion for aesthetics and storytelling shines through in every aspect of our website.",
-        speed: 4,
+        speed: 7,
       },
     });
 
     gsap.to(".section-eric-content", {
       duration: 2,
-      delay: 6,
+      delay: 10,
       text: {
         value:
           "Meet Eric, the mastermind behind the architecture and functionality of our platform. With a knack for turning ideas into reality, Eric ensures that every feature is not only aesthetically pleasing but also seamlessly functional. Their dedication to perfection and precision is the cornerstone of our success.",
-        speed: 5,
+        speed: 6,
       },
     });
 
@@ -76,7 +76,7 @@ function Aboutus() {
       {
         duration: 3,
         opacity: 1,
-        delay: 6,
+        delay: 11,
       }
     );
 
@@ -87,7 +87,7 @@ function Aboutus() {
       },
       {
         opacity: 1,
-        delay: 6,
+        delay: 10,
         duration: 1,
         stagger: {
           each: 0.5,
@@ -121,7 +121,7 @@ function Aboutus() {
         <p className="socials">
           <p className="socialsalign">
             <img src={github} />
-            :Jaketattersall
+            :<a className="githublinks" href="https://github.com/Jaketattersall">Jaketattersall</a>
           </p>
           <p className="socialsalign">
             <EnvelopeSimple size={32} />
@@ -136,7 +136,7 @@ function Aboutus() {
         <p className="socials">
           <p className="socialsalign">
             <img src={github} />
-            :Daniel-pho
+            :<a className="githublinks" href="https://github.com/Daniel-pho">Daniel-pho</a>
           </p>
           <p className="socialsalign">
             <EnvelopeSimple size={32} />
@@ -151,7 +151,7 @@ function Aboutus() {
         <p className="socials">
           <p className="socialsalign">
             <img src={github} />
-            :EricLeeCodes
+            :<a className="githublinks" href="https://github.com/EricLeeCodes">EricLeeCodes</a>
           </p>
           <p className="socialsalign">
             <EnvelopeSimple size={32} />

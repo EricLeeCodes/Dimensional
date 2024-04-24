@@ -49,7 +49,7 @@ function Phonepage() {
         trigger: ".second-phone",
         start: "50% bottom",
         end: "80% bottom",
-        
+        snap: 1,
         scrub: 1
       }
     } );
@@ -66,7 +66,7 @@ function Phonepage() {
         trigger: ".third-phone",
         start: "top center",
         end: "bottom 99%",
-        
+        snap: 1,
         scrub: true,
       },
     });
@@ -81,7 +81,7 @@ function Phonepage() {
         trigger: ".fourth-phone",
         start: "top center",
         end: "bottom 99%",
-        
+        snap: 1,
         scrub: true,
       },
     });
@@ -95,7 +95,7 @@ function Phonepage() {
         trigger: ".fifth-phone",
         start: "top center",
         end: "bottom 99%",
-        
+        snap: 1,
         scrub: true,
       },
     });
@@ -110,10 +110,23 @@ function Phonepage() {
         trigger: ".sixth-phone",
         start: "top center",
         end: "bottom 99%",
-        
+        snap: 1,
         scrub: true,
       },
     });
+
+    tl.fromTo(".phone-buttons", {
+      opacity: 0,
+    },{
+      opacity:1,
+      scrollTrigger: {
+        trigger: ".sixth-phone",
+        start: "40% center",
+        end: "bottom 99%",
+        scrub: 1,
+        // markers: true
+      }
+    })
   });
   const contextValue = useContext(ShopContext);
   useEffect(() => {
