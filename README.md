@@ -1,5 +1,5 @@
 # Welcome to Dimensional 🌟
-
+Check out our website here!: https://www.dimensionalproject.org/
 </br>
 Welcome to the forefront of e-commerce innovation! At Dimensional, we're revolutionizing online shopping by bringing the physical store experience directly to your screen. Say goodbye to static images and hello to a dynamic, immersive journey through our 3D showcase of products.
 
